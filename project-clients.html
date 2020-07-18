@@ -1,0 +1,1758 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+<link rel="icon" href="favicon.ico" type="image/x-icon"/>
+
+<title>Client Portfolio</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+<style>
+  .toggle.ios, .toggle-on.ios, .toggle-off.ios { border-radius: 20px; }
+  .toggle.ios .toggle-handle { border-radius: 20px; }
+</style>
+<!-- Bootstrap Core and vandor -->
+<link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css" />
+<link rel="stylesheet" href="assets/plugins/dropify/css/dropify.min.css">
+<script src="https://kit.fontawesome.com/a84ad003ff.js" crossorigin="anonymous"></script>
+<!-- Core css -->
+<link rel="stylesheet" href="assets/css/main.css"/>
+<link rel="stylesheet" href="assets/css/theme1.css"/>
+<link rel="stylesheet" href="assets/customized_css/clientProfileView.css"/>
+
+</head>
+
+<body class="font-montserrat">
+<!-- Page Loader -->
+<div class="page-loader-wrapper">
+    <div class="loader">
+    </div>
+</div>
+
+<div id="main_content">
+  <div id="header_top" class="header_top">
+      <div class="container">
+          <div class="hleft">
+             <a class="header-brand" href="index.html"><img class="avatar" src="assets/images/sm/zm.png"></a>
+              <div class="dropdown">
+                  <a href="javascript:void(0)" class="nav-link user_btn"><img class="avatar" src="assets/images/user.png" alt="" data-toggle="tooltip" data-placement="right" title="User Menu"/></a>
+                  <a href="page-search.html" class="nav-link icon xs-hide"><i class="fa fa-search" data-toggle="tooltip" data-placement="right" title="Search"></i></a>
+                  <a href="Drilldown-Chart.html"  class="nav-link icon app_inbox xs-hide"><i class="fa fa-calendar" data-toggle="tooltip" data-placement="right" title="Calendar"></i></a>
+                  <a href="discover.html"  class="nav-link icon xs-hide"><i class="fa fa-linode" data-toggle="tooltip" data-placement="right" title="Discover Your ZM"></i></a>
+                  <a href="app-chat.html"  class="nav-link icon xs-hide"><i class="fa fa-comments-o" data-toggle="tooltip" data-placement="right" title="Chat"></i></a>
+                  <a href="app-help.html" class="nav-link icon app_file xs-hide"><i class="fa fa-group" data-toggle="tooltip" data-placement="right" title="KnowHow"></i></a>
+              </div>
+          </div>
+          <div class="hright">
+              <div class="dropdown">
+                  <a href="javascript:void(0)" class="nav-link icon settingbar"><i class="fa fa-cog fa-spin fa-3x fa-fw" data-toggle="tooltip" data-placement="right" title="Configuration"></i></a>
+                 <a href="javascript:void(0)" class="nav-link icon theme_btn xs-hide"><i class="fa fa-braille" data-toggle="tooltip" data-placement="right" title="Themes"></i></a>
+                 <a href="project-settings.html" class=""><i class="fa fa-cogs" data-toggle="tooltip" data-placement="right" title="Settings"></i></a>
+                  <a href="javascript:void(0)" class="nav-link icon menu_toggle"><i class="fa fa-dedent"></i></a>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="rightsidebar" class="right_sidebar">
+        <a href="javascript:void(0)" class="p-3 settingbar float-right"><i class="fa fa-close"></i></a>
+        <div class="p-4">
+            <div class="mb-4">
+                <h6 class="font-14 font-weight-bold text-muted">Font Style</h6>
+                <div class="custom-controls-stacked font_setting">
+                    <label class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" class="custom-control-input" name="font" value="font-opensans">
+                        <span class="custom-control-label">Open Sans Font</span>
+                    </label>
+                    <label class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" class="custom-control-input" name="font" value="font-montserrat" checked="">
+                        <span class="custom-control-label">Montserrat Google Font</span>
+                    </label>
+                    <label class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" class="custom-control-input" name="font" value="font-roboto">
+                        <span class="custom-control-label">Robot Google Font</span>
+                    </label>
+                </div>
+            </div>
+            <hr>
+            <div class="mb-4">
+                <h6 class="font-14 font-weight-bold text-muted">Dropdown Menu Icon</h6>
+                <div class="custom-controls-stacked arrow_option">
+                    <label class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" class="custom-control-input" name="marrow" value="arrow-a">
+                        <span class="custom-control-label">A</span>
+                    </label>
+                    <label class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" class="custom-control-input" name="marrow" value="arrow-b">
+                        <span class="custom-control-label">B</span>
+                    </label>
+                    <label class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" class="custom-control-input" name="marrow" value="arrow-c" checked="">
+                        <span class="custom-control-label">C</span>
+                    </label>
+                </div>
+                <h6 class="font-14 font-weight-bold mt-4 text-muted">SubMenu List Icon</h6>
+                <div class="custom-controls-stacked list_option">
+                    <label class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" class="custom-control-input" name="listicon" value="list-a" checked="">
+                        <span class="custom-control-label">A</span>
+                    </label>
+                    <label class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" class="custom-control-input" name="listicon" value="list-b">
+                        <span class="custom-control-label">B</span>
+                    </label>
+                    <label class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" class="custom-control-input" name="listicon" value="list-c">
+                        <span class="custom-control-label">C</span>
+                    </label>
+                </div>
+            </div>
+            <hr>
+            <div>
+                <h6 class="font-14 font-weight-bold mt-4 text-muted">General Settings</h6>
+                <ul class="setting-list list-unstyled mt-1 setting_switch">
+                    <li>
+                        <label class="custom-switch">
+                            <span class="custom-switch-description">Night Mode</span>
+                            <input type="checkbox" name="custom-switch-checkbox" class="custom-switch-input btn-darkmode">
+                            <span class="custom-switch-indicator"></span>
+                        </label>
+                    </li>
+                    <li>
+                        <label class="custom-switch">
+                            <span class="custom-switch-description">Fix Navbar top</span>
+                            <input type="checkbox" name="custom-switch-checkbox" class="custom-switch-input btn-fixnavbar">
+                            <span class="custom-switch-indicator"></span>
+                        </label>
+                    </li>
+                    <li>
+                        <label class="custom-switch">
+                            <span class="custom-switch-description">Header Dark</span>
+                            <input type="checkbox" name="custom-switch-checkbox" class="custom-switch-input btn-pageheader" checked="">
+                            <span class="custom-switch-indicator"></span>
+                        </label>
+                    </li>
+                    <li>
+                        <label class="custom-switch">
+                            <span class="custom-switch-description">Min Sidebar Dark</span>
+                            <input type="checkbox" name="custom-switch-checkbox" class="custom-switch-input btn-min_sidebar">
+                            <span class="custom-switch-indicator"></span>
+                        </label>
+                    </li>
+                    <li>
+                        <label class="custom-switch">
+                            <span class="custom-switch-description">Sidebar Dark</span>
+                            <input type="checkbox" name="custom-switch-checkbox" class="custom-switch-input btn-sidebar">
+                            <span class="custom-switch-indicator"></span>
+                        </label>
+                    </li>
+                    <li>
+                        <label class="custom-switch">
+                            <span class="custom-switch-description">Icon Color</span>
+                            <input type="checkbox" name="custom-switch-checkbox" class="custom-switch-input btn-iconcolor">
+                            <span class="custom-switch-indicator"></span>
+                        </label>
+                    </li>
+                    <li>
+                        <label class="custom-switch">
+                            <span class="custom-switch-description">Gradient Color</span>
+                            <input type="checkbox" name="custom-switch-checkbox" class="custom-switch-input btn-gradient">
+                            <span class="custom-switch-indicator"></span>
+                        </label>
+                    </li>
+                    <li>
+                        <label class="custom-switch">
+                            <span class="custom-switch-description">Box Shadow</span>
+                            <input type="checkbox" name="custom-switch-checkbox" class="custom-switch-input btn-boxshadow">
+                            <span class="custom-switch-indicator"></span>
+                        </label>
+                    </li>
+                    <li>
+                        <label class="custom-switch">
+                            <span class="custom-switch-description">RTL Support</span>
+                            <input type="checkbox" name="custom-switch-checkbox" class="custom-switch-input btn-rtl">
+                            <span class="custom-switch-indicator"></span>
+                        </label>
+                    </li>
+                    <li>
+                        <label class="custom-switch">
+                            <span class="custom-switch-description">Box Layout</span>
+                            <input type="checkbox" name="custom-switch-checkbox" class="custom-switch-input btn-boxlayout">
+                            <span class="custom-switch-indicator"></span>
+                        </label>
+                    </li>
+                </ul>
+            </div>
+            <hr>
+            <div class="form-group">
+                <label class="d-block">Storage <span class="float-right">77%</span></label>
+                <div class="progress progress-sm">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="77" aria-valuemin="0" aria-valuemax="100" style="width: 77%;"></div>
+                </div>
+                <button type="button" class="btn btn-outline-warning btn-block mt-3">Upgrade Storage</button>
+            </div>
+        </div>
+    </div>
+
+
+  <div id="left-sidebar" class="sidebar ">
+        <h5 style="color:#ff8c00" class="brand-name">ZMART Manager<a href="javascript:void(0)" class="menu_option float-right"><i class="icon-grid font-16" data-toggle="tooltip" data-placement="left" title="Change View"></i></a></h5>
+        <nav id="left-sidebar-nav" class="sidebar-nav">
+            <ul class="metismenu">
+        <li><a href="index.html"><i class="fa fa-th" data-toggle="tooltip" data-placement="right" title="Global HQ"></i><span>Global HQ</span></a></li>
+				<li><a href="project-onboarding.html"><i class="fa fa-random" data-toggle="tooltip" data-placement="right" title="Onboarding"></i><span>OnBoarding</span></a></li>
+				<li><a href="project-clients.html"><i class="fa fa-list-ol" data-toggle="tooltip" data-placement="right" title="Clients"></i><span>Clients</span></a></li>
+				<li><a href="project-taskboard.html"><i class="fa fa-tasks" data-toggle="tooltip" data-placement="right" title="Matters & Tasks"></i><span>Matters & Tasks</span></a></li>
+				<li><a href="project-fees.html"><i class="fa fa-calculator" data-toggle="tooltip" data-placement="right" title="Fee Income"></i><span>Fee Income</span><span class="badge badge-pill badge-warning">BETA</span></a></li>
+				<li><a href="log-time.html"><i class="fa fa-history" data-toggle="tooltip" data-placement="right" title="Log Time"></i><span>Log Time</span></a></li>
+				<li><a href="noticeboard.html"><i class="fa fa-calendar-check-o" data-toggle="tooltip" data-placement="right" title="Notice Board"></i><span>Notice Board</span></a></li>
+				<li><a href="project-employees.html"><i class="fa fa-drivers-license-o" data-toggle="tooltip" data-placement="right" title="Staff Zone"></i><span>Staff Zone</span></a></li>
+				<li><a href="eAudit-papers.html"><i class="fa fa-folder-open" data-toggle="tooltip" data-placement="right" title="eAuditing"></i><span>eAuditing</span><span class="badge badge-pill badge-warning">BETA</span></a></li>
+				<li><a href="reports.html"><i class="fa fa-bar-chart-o" data-toggle="tooltip" data-placement="right" title="Reports"></i><span>Reports</span><span class="badge badge-pill badge-warning">BETA</span></a></li>
+				<li><a href="Cloudoc.html"><i class="fa fa-sellsy" data-toggle="tooltip" data-placement="right" title="ClouDoc"></i><span>ClouDoc</span><span class="badge badge-pill badge-warning">BETA</span></a></li>
+				<li id="Practice funding">
+       <a href="javascript:void(0)" class="has-arrow arrow-c" ><i class="fa fa-book" data-toggle="tooltip" data-placement="right" title="Practice Hub"></i><span>Practice Hub</span></a>
+                 <ul>
+                     <li><a href="#"><i class="fa fa-angle-double-right" data-toggle="tooltip" data-placement="right" title="Client BI"></i><span>Client BI</span></a></li>
+                    <li><a href="#"><i class="fa fa-angle-double-right" data-toggle="tooltip" data-placement="right" title=" Mergers"></i><span>Mergers</span></a></li>
+                     <li><a href="business-funding.html"><i class="fa fa-angle-double-right" data-toggle="tooltip" data-placement="right" title="Funding Options"></i><span>Funding</span></a></li>
+                 </ul>
+             </li>
+         </ul>
+     </nav>
+    </div>
+
+    <div class="page" id="mainpageClients">
+      <div id="page_top" class="section-body top_dark">
+        <div class="page-header">
+            <div class="left">
+
+            </div>
+            <div class="right">
+                <div class="input-icon xs-hide mr-4">
+                    <input type="text" class="form-control" placeholder="Search for...">
+                    <span class="input-icon-addon"><i class="fa fa-search"></i></span>
+                </div>
+                <div class="notification d-flex">
+                    <div class="dropdown d-flex">
+                        <a class="nav-link icon d-none d-md-flex btn btn-default btn-icon ml-2" data-toggle="dropdown"><i class="fa fa-language"></i></a>
+                        <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                            <a class="dropdown-item" href="#"><img class="w20 mr-2" src="assets/images/flags/us.svg">English</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#"><img class="w20 mr-2" src="assets/images/flags/es.svg">Spanish</a>
+                            <a class="dropdown-item" href="#"><img class="w20 mr-2" src="assets/images/flags/jp.svg">japanese</a>
+                            <a class="dropdown-item" href="#"><img class="w20 mr-2" src="assets/images/flags/bl.svg">France</a>
+                        </div>
+                    </div>
+                    <div class="dropdown d-flex">
+                        <a class="nav-link icon d-none d-md-flex btn btn-default btn-icon ml-2" data-toggle="dropdown"><i class="fa fa-envelope"></i><span class="badge badge-success nav-unread"></span></a>
+                        <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                            <ul class="right_chat list-unstyled w350 p-0">
+                                <li class="online">
+                                    <a href="javascript:void(0);" class="media">
+                                        <img class="media-object" src="assets/images/xs/avatar4.jpg" alt="">
+                                        <div class="media-body">
+                                            <span class="name">Donald Gardner</span>
+                                            <div class="message">It is a long established fact that a reader</div>
+                                            <small>11 mins ago</small>
+                                            <span class="badge badge-outline status"></span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="online">
+                                    <a href="javascript:void(0);" class="media">
+                                        <img class="media-object " src="assets/images/xs/avatar5.jpg" alt="">
+                                        <div class="media-body">
+                                            <span class="name">Wendy Keen</span>
+                                            <div class="message">There are many variations of passages of Lorem Ipsum</div>
+                                            <small>18 mins ago</small>
+                                            <span class="badge badge-outline status"></span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="offline">
+                                    <a href="javascript:void(0);" class="media">
+                                        <img class="media-object " src="assets/images/xs/avatar2.jpg" alt="">
+                                        <div class="media-body">
+                                            <span class="name">Matt Rosales</span>
+                                            <div class="message">Contrary to popular belief, Lorem Ipsum is not simply</div>
+                                            <small>27 mins ago</small>
+                                            <span class="badge badge-outline status"></span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="online">
+                                    <a href="javascript:void(0);" class="media">
+                                        <img class="media-object " src="assets/images/xs/avatar3.jpg" alt="">
+                                        <div class="media-body">
+                                            <span class="name">Phillip Smith</span>
+                                            <div class="message">It has roots in a piece of classical Latin literature from 45 BC</div>
+                                            <small>33 mins ago</small>
+                                            <span class="badge badge-outline status"></span>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="dropdown-divider"></div>
+                            <a href="javascript:void(0)" class="dropdown-item text-center text-muted-dark readall">Mark all as read</a>
+                        </div>
+                    </div>
+                    <div class="dropdown d-flex">
+                        <a class="nav-link icon d-none d-md-flex btn btn-default btn-icon ml-2" data-toggle="dropdown"><i class="fa fa-bell"></i><span class="badge badge-primary nav-unread"></span></a>
+                        <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                            <ul class="list-unstyled feeds_widget">
+                                <li>
+                                    <div class="feeds-left"><i class="fa fa-check"></i></div>
+                                    <div class="feeds-body">
+                                        <h4 class="title text-danger">Issue Fixed <small class="float-right text-muted">11:05</small></h4>
+                                        <small>WE have fix all Design bug with Responsive</small>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="feeds-left"><i class="fa fa-user"></i></div>
+                                    <div class="feeds-body">
+                                        <h4 class="title">New User <small class="float-right text-muted">10:45</small></h4>
+                                        <small>I feel great! Thanks team</small>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="feeds-left"><i class="fa fa-thumbs-o-up"></i></div>
+                                    <div class="feeds-body">
+                                        <h4 class="title">7 New Feedback <small class="float-right text-muted">Today</small></h4>
+                                        <small>It will give a smart finishing to your site</small>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="feeds-left"><i class="fa fa-question-circle"></i></div>
+                                    <div class="feeds-body">
+                                        <h4 class="title text-warning">Server Warning <small class="float-right text-muted">10:50</small></h4>
+                                        <small>Your connection is not private</small>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="feeds-left"><i class="fa fa-shopping-cart"></i></div>
+                                    <div class="feeds-body">
+                                        <h4 class="title">7 New Orders <small class="float-right text-muted">11:35</small></h4>
+                                        <small>You received a new oder from Tina.</small>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="dropdown-divider"></div>
+                            <a href="javascript:void(0)" class="dropdown-item text-center text-muted-dark readall">Mark all as read</a>
+                        </div>
+                    </div>
+                   <div class="dropdown d-flex">
+                                <a class="nav-link icon d-none d-md-flex btn btn-default btn-icon ml-2" data-toggle="dropdown"><i class="fa fa-user"></i></a>
+                                <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                                    <a class="dropdown-item" href="page-profile.html"><i class="dropdown-icon fa fa-user"></i> Profile</a>
+                                    <a class="dropdown-item" href="project-settings.html"><i class="dropdown-icon fa fa-cogs"></i> Settings</a>
+                                    <a class="dropdown-item" href="javascript:void(0)"><span class="float-right"><span class="badge badge-primary">6</span></span><i class="dropdown-icon fa fa-envelope"></i> Inbox</a>
+                                    <a class="dropdown-item" href="javascript:void(0)"><i class="dropdown-icon fa fa-send"></i> Message</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="app-help.html"><i class="dropdown-icon fa fa-question-circle"></i> Need help?</a>
+                                    <a class="dropdown-item" onclick="Logout()" ><i class="dropdown-icon fa fa-sign-out"></i> Sign out</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+      </div>
+	     <nav class=" navbar navbar-style" style="background:">
+			<div class="navbar-header" style="margin-top: 20px" >
+        <a href="javascript:void(0)" class="icon menu_toggle mr-3 float-left "><i class="fa fa-dedent"></i></a>
+        <h1 class="page-title">Client Portfolio Insights</h1>
+			</div>
+			<ul class="buttons" >
+				<button class="btn btn-outline-warning">  <i class="fas fa-upload"></i>Export</button>
+				<button class="btn btn-outline-warning"> <i class="fas fa-download"></i>Import</button>
+				<button onclick="AddNewClientModal()" class="btn btn-outline-warning"> <i class="fas fa-plus"></i>Add Client</button>
+			</ul>
+		</nav>
+  <div class="d-flex" id="wrapper">
+    <!-- Sidebar -->
+    <div class="bg-light border-right" id="sidebar-wrapper"  >
+      <div class="btn-group-vertical" id="clientsfilter" style="width: 150px">
+        <a href="#"  onclick="FilterDataTableAI('Active')" class="list-group-item list-group-item-action bg" style="height:60px; color:#0E013D;">Overall Active Portfolio</a>
+      </div>
+        <a href="#"  onclick="FilterDataTableAI('Inactive')" class="list-group-item list-group-item-action" style="height:60px; color:#0E013D;">Inactive Portfolio</a>
+    </div>
+    <!-- /#sidebar-wrapper -->
+    <div class="table-responsive">
+		<div class="search">
+			<nav class="navbar navbar-light bg-light">
+  				<form class="form-inline">
+    				<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+    				<button class="btn btn-outline-warning my-2 my-sm-0" type="submit">Add filter</button>
+			</nav>
+		</div>
+    <div class="table-responsive" >
+		<table id="dtBasicExample" class="table table table-hover table-vcenter text-nowrap table_custom border-style list" style="width:100%">
+  		<thead>
+  		          <colgroup>
+    <col span="2" style="background-color:">
+    <col style="background-color:#FEA690">
+     <col style="background-color:yellow">
+  </colgroup>
+    			<tr>
+				<th class="th-sm">Client Code
+     			</th>
+				  <th class="th-sm">Client Name
+				  </th>
+				  <th class="th-sm">Tasks Due
+				  </th>
+				  <th class="th-sm">Due in 7Days
+          </th>
+				  <th class="th-sm">Recent Notice
+				  </th>
+				  <th class="th-sm">Client Manager
+				  </th>
+          <th id="Belongsto" class="th-sm">Belongs to
+          </th>
+   			  </tr>
+  		</thead>
+      <tbody id ="ListTableBody">
+      </tbody>
+	</table>
+	  </div>
+    </div>
+  </div>
+</div>
+
+<!-- PopUp Model-->
+<div class="modal fade" id="AddClient" role="dialog">
+  <form id="clientdetailsfrom">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 id="defaultModalLabel">Complete New Client Details<h3>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <div class="container">
+
+         <div class="body"  style="font-size: 14px"  >
+           <div class="row" align="right">
+             <div class="col" align="right">
+        <form id="addclietform">
+           <div class="form-group row" >
+             <label for="Cname" class="col-sm-3 col-form-label">Client Name</label>
+             <div class="col-sm-9">
+                <input type="text" class="form-control" id="ClientName">
+             </div>
+           </div>
+        </form>
+           <div class="form-group row" >
+             <label for="Lname" class="col-sm-3 col-form-label">Legal Name</label>
+             <div class="col-sm-9">
+               <input type="text" class="form-control" id="LegalName">
+             </div>
+           </div>
+
+           <div class="form-group row">
+             <label for="Ctype" class="col-sm-3 col-form-label">Client Type</label>
+            <div class="col-sm-9">
+               <select id="ClientType" class="form-control">
+               </select>
+             </div>
+           </div>
+
+           <div class="form-group row">
+              <label for="Cref" class="col-sm-3 col-form-label">Client Email</label>
+              <div class="col-sm-9">
+                 <input type="text" class="form-control" id="ClientEmail">
+              </div>
+            </div>
+
+            <div class="form-group row">
+               <label for="Cref" class="col-sm-3 col-form-label">Phone Number</label>
+               <div class="col-sm-9">
+                  <input type="text" class="form-control" id="PhoneNumber">
+               </div>
+             </div>
+
+          <div class="form-group row">
+             <label for="Cref" class="col-sm-3 col-form-label">Client Code</label>
+             <div class="col-sm-9">
+                <input type="text" class="form-control" id="ClientCode">
+             </div>
+           </div>
+
+         <div class="form-group row">
+             <label for="description" class="col-sm-3 col-form-label">Description</label>
+             <div class="col-sm-9">
+                <textarea class="form-control" id="Description" rows="3"></textarea>
+             </div>
+           </div>
+
+         <div class="form-group row">
+             <label for="tags" class="col-sm-3 col-form-label">Industry</label>
+             <div class="col-sm-9">
+                 <select id="Tags" class="form-control">
+                 <option>Agriculture and Plantations</option>
+                 <option>Basic Metal Production</option>
+                  <option>Chemical Industries</option>
+                 <option>Wholesale and Retail Trades</option>
+                  <option>Property and Construction</option>
+                 <option>Education</option>
+                 <option>Financial and Professional Services</option>
+                 <option>Food, Drink and Tobacco</option>
+                  <option>Forestry, Wood, Pulp and Paper</option>
+                 <option>Health Services</option>
+                  <option>Hotels, Tourism and Catering</option>
+                 <option>Mining (Coal, Other Mining)</option>
+                 <option>Mechanical and Electrical Engineering</option>
+                 <option>Media, Culture and Graphical</option>
+                  <option>Oil and Gas Production, Oil Refining</option>
+                 <option>Postal and Telecommunications Services</option>
+                  <option>Public Service</option>
+                 <option>Shipping, Ports and Fisheries</option>
+                 <option>Textiles, Clothing, Leather and Footwear</option>
+                 <option>Transportation</option>
+                  <option>Transport Equipment Manufacturing</option>
+                 <option>Utilities (Water, Gas and Electricity)</option>
+               </select>
+             </div>
+           </div>
+
+         <div class="form-group row">
+            <label for="active" class="col-sm-3 col-form-label">Make Active</label>
+             <div class="col-sm-9" align="left">
+              <label class="custom-switch">
+              <input type="checkbox" id="tglSendValue" name="custom-switch-checkbox" class="custom-switch-input btn-darkmode">
+              <span  for="tglSendValue" class="custom-switch-indicator"></span>
+              <input type="text" class="form-control" id="ActiveStatus" value="Inactive">
+              </label>
+             </div>
+           </div>
+
+         <div class="form-group row">
+             <label for="cddref" class="col-sm-3 col-form-label" style="color: gray" > Accounting</label>
+             <div class="col-sm-9">
+                <label for="--" class="col-sm-40 col-form-label" style="color: gray">---------------------------------------------</label>
+             </div>
+           </div>
+
+         <div class="form-group row">
+             <label for="day" class="col-sm-3 col-form-label">Year End(Day)</label>
+             <div class="col-sm-9">
+               <select id="AccountingDay" class="form-control">
+                 <option>1</option>
+                 <option>2</option>
+                  <option>3</option>
+                 <option>4</option>
+                  <option>5</option>
+                 <option>6</option>
+                 <option>7</option>
+                 <option>8</option>
+                  <option>9</option>
+                 <option>10</option>
+                  <option>11</option>
+                 <option>12</option>
+                 <option>13</option>
+                 <option>14</option>
+                  <option>15</option>
+                 <option>16</option>
+                  <option>17</option>
+                 <option>18</option>
+                 <option>19</option>
+                 <option>20</option>
+                  <option>21</option>
+                 <option>22</option>
+                  <option>23</option>
+                 <option>24</option>
+                 <option>25</option>
+                 <option>26</option>
+                  <option>27</option>
+                 <option>28</option>
+                  <option>29</option>
+                 <option>30</option>
+                 <option>31</option>
+               </select>
+             </div>
+           </div>
+
+         <div class="form-group row">
+             <label for="day" class="col-sm-3 col-form-label">Year End(Month)</label>
+             <div class="col-sm-9">
+               <select id="AccountingMonth" class="form-control">
+                  <option>Select Month</option>
+                 <option >January</option>
+                 <option>February</option>
+                  <option >March</option>
+                 <option>April</option>
+                 <option >May</option>
+                 <option>June</option>
+                  <option >July</option>
+                 <option>August</option>
+                 <option >September</option>
+                 <option>October</option>
+                  <option >November</option>
+                 <option>December</option>
+               </select>
+             </div>
+           </div>
+
+          <div class="form-group row">
+             <label for="cddref" class="col-sm-3 col-form-label" style="color: gray" > Payroll</label>
+             <div class="col-sm-9">
+                 <label for="--" class="col-sm-40 col-form-label" style="color: gray">---------------------------------------------</label>
+             </div>
+           </div>
+
+         <div class="form-group row">
+             <label for="ref2" class="col-sm-3 col-form-label">Reference</label>
+             <div class="col-sm-9">
+                <input type="text" class="form-control" id="Reference">
+             </div>
+           </div>
+
+         <div class="form-group row">
+             <label for="cref" class="col-sm-3 col-form-label">Collection Reference</label>
+             <div class="col-sm-9">
+                <input type="text" class="form-control" id="CollectionReference">
+             </div>
+           </div>
+             </div>
+
+           <div class="col">
+
+           <div class="form-group row">
+               <label for="cddref" class="col-sm-3 col-form-label" style="color: gray" >Legal Address Details</label>
+               <div class="col-sm-9">
+                <label for="--" class="col-sm-40 col-form-label" style="color: gray">---------------------------------------------</label>
+               </div>
+           </div>
+
+           <div class="form-group row">
+               <label for="laddress" class="col-sm-3 col-form-label">Legal Address</label>
+               <div class="col-sm-9">
+                  <textarea class="form-control" id="LegalAddress" rows="3"></textarea>
+                 </div>
+            </div>
+
+            <div class="form-group row">
+              <label for="city" class="col-sm-3 col-form-label">City</label>
+              <div class="col-sm-9">
+                <input type="text" class="form-control" id="LegalCity">
+              </div>
+           </div>
+
+            <div hidden class="form-group row">
+              <label for="Region" class="col-sm-3 col-form-label">Region</label>
+              <div class="col-sm-9">
+                <input type="text" class="form-control" id="LegalRegion">
+              </div>
+           </div>
+
+            <div class="form-group row">
+              <label for="pcode" class="col-sm-3 col-form-label">Post Code</label>
+              <div class="col-sm-9">
+                <input type="text" class="form-control" id="LegalPostCode">
+              </div>
+           </div>
+
+            <div class="form-group row">
+              <label for="County" class="col-sm-3 col-form-label">Country</label>
+              <div class="col-sm-9">
+                <select type="text" class="form-control" id="LegalCountry">
+                  <option value="Afganistan">Afghanistan</option>
+                    <option value="Albania">Albania</option>
+                    <option value="Algeria">Algeria</option>
+                    <option value="American Samoa">American Samoa</option>
+                    <option value="Andorra">Andorra</option>
+                    <option value="Angola">Angola</option>
+                    <option value="Anguilla">Anguilla</option>
+                    <option value="Antigua & Barbuda">Antigua & Barbuda</option>
+                    <option value="Argentina">Argentina</option>
+                    <option value="Armenia">Armenia</option>
+                    <option value="Aruba">Aruba</option>
+                    <option value="Australia">Australia</option>
+                    <option value="Austria">Austria</option>
+                    <option value="Azerbaijan">Azerbaijan</option>
+                    <option value="Bahamas">Bahamas</option>
+                    <option value="Bahrain">Bahrain</option>
+                    <option value="Bangladesh">Bangladesh</option>
+                    <option value="Barbados">Barbados</option>
+                    <option value="Belarus">Belarus</option>
+                    <option value="Belgium">Belgium</option>
+                    <option value="Belize">Belize</option>
+                    <option value="Benin">Benin</option>
+                    <option value="Bermuda">Bermuda</option>
+                    <option value="Bhutan">Bhutan</option>
+                    <option value="Bolivia">Bolivia</option>
+                    <option value="Bonaire">Bonaire</option>
+                    <option value="Bosnia & Herzegovina">Bosnia & Herzegovina</option>
+                    <option value="Botswana">Botswana</option>
+                    <option value="Brazil">Brazil</option>
+                    <option value="British Indian Ocean Ter">British Indian Ocean Ter</option>
+                    <option value="Brunei">Brunei</option>
+                    <option value="Bulgaria">Bulgaria</option>
+                    <option value="Burkina Faso">Burkina Faso</option>
+                    <option value="Burundi">Burundi</option>
+                    <option value="Cambodia">Cambodia</option>
+                    <option value="Cameroon">Cameroon</option>
+                    <option value="Canada">Canada</option>
+                    <option value="Canary Islands">Canary Islands</option>
+                    <option value="Cape Verde">Cape Verde</option>
+                    <option value="Cayman Islands">Cayman Islands</option>
+                    <option value="Central African Republic">Central African Republic</option>
+                    <option value="Chad">Chad</option>
+                    <option value="Channel Islands">Channel Islands</option>
+                    <option value="Chile">Chile</option>
+                    <option value="China">China</option>
+                    <option value="Christmas Island">Christmas Island</option>
+                    <option value="Cocos Island">Cocos Island</option>
+                    <option value="Colombia">Colombia</option>
+                    <option value="Comoros">Comoros</option>
+                    <option value="Congo">Congo</option>
+                    <option value="Cook Islands">Cook Islands</option>
+                    <option value="Costa Rica">Costa Rica</option>
+                    <option value="Cote DIvoire">Cote DIvoire</option>
+                    <option value="Croatia">Croatia</option>
+                    <option value="Cuba">Cuba</option>
+                    <option value="Curaco">Curacao</option>
+                    <option value="Cyprus">Cyprus</option>
+                    <option value="Czech Republic">Czech Republic</option>
+                    <option value="Denmark">Denmark</option>
+                    <option value="Djibouti">Djibouti</option>
+                    <option value="Dominica">Dominica</option>
+                    <option value="Dominican Republic">Dominican Republic</option>
+                    <option value="East Timor">East Timor</option>
+                    <option value="Ecuador">Ecuador</option>
+                    <option value="Egypt">Egypt</option>
+                    <option value="El Salvador">El Salvador</option>
+                    <option value="Equatorial Guinea">Equatorial Guinea</option>
+                    <option value="Eritrea">Eritrea</option>
+                    <option value="Estonia">Estonia</option>
+                    <option value="Ethiopia">Ethiopia</option>
+                    <option value="Falkland Islands">Falkland Islands</option>
+                    <option value="Faroe Islands">Faroe Islands</option>
+                    <option value="Fiji">Fiji</option>
+                    <option value="Finland">Finland</option>
+                    <option value="France">France</option>
+                    <option value="French Guiana">French Guiana</option>
+                    <option value="French Polynesia">French Polynesia</option>
+                    <option value="French Southern Ter">French Southern Ter</option>
+                    <option value="Gabon">Gabon</option>
+                    <option value="Gambia">Gambia</option>
+                    <option value="Georgia">Georgia</option>
+                    <option value="Germany">Germany</option>
+                    <option value="Ghana">Ghana</option>
+                    <option value="Gibraltar">Gibraltar</option>
+                    <option value="Great Britain">Great Britain</option>
+                    <option value="Greece">Greece</option>
+                    <option value="Greenland">Greenland</option>
+                    <option value="Grenada">Grenada</option>
+                    <option value="Guadeloupe">Guadeloupe</option>
+                    <option value="Guam">Guam</option>
+                    <option value="Guatemala">Guatemala</option>
+                    <option value="Guinea">Guinea</option>
+                    <option value="Guyana">Guyana</option>
+                    <option value="Haiti">Haiti</option>
+                    <option value="Hawaii">Hawaii</option>
+                    <option value="Honduras">Honduras</option>
+                    <option value="Hong Kong">Hong Kong</option>
+                    <option value="Hungary">Hungary</option>
+                    <option value="Iceland">Iceland</option>
+                    <option value="Indonesia">Indonesia</option>
+                    <option value="India">India</option>
+                    <option value="Iran">Iran</option>
+                    <option value="Iraq">Iraq</option>
+                    <option value="Ireland">Ireland</option>
+                    <option value="Isle of Man">Isle of Man</option>
+                    <option value="Israel">Israel</option>
+                    <option value="Italy">Italy</option>
+                    <option value="Jamaica">Jamaica</option>
+                    <option value="Japan">Japan</option>
+                    <option value="Jordan">Jordan</option>
+                    <option value="Kazakhstan">Kazakhstan</option>
+                    <option value="Kenya">Kenya</option>
+                    <option value="Kiribati">Kiribati</option>
+                    <option value="Korea North">Korea North</option>
+                    <option value="Korea Sout">Korea South</option>
+                    <option value="Kuwait">Kuwait</option>
+                    <option value="Kyrgyzstan">Kyrgyzstan</option>
+                    <option value="Laos">Laos</option>
+                    <option value="Latvia">Latvia</option>
+                    <option value="Lebanon">Lebanon</option>
+                    <option value="Lesotho">Lesotho</option>
+                    <option value="Liberia">Liberia</option>
+                    <option value="Libya">Libya</option>
+                    <option value="Liechtenstein">Liechtenstein</option>
+                    <option value="Lithuania">Lithuania</option>
+                    <option value="Luxembourg">Luxembourg</option>
+                    <option value="Macau">Macau</option>
+                    <option value="Macedonia">Macedonia</option>
+                    <option value="Madagascar">Madagascar</option>
+                    <option value="Malaysia">Malaysia</option>
+                    <option value="Malawi">Malawi</option>
+                    <option value="Maldives">Maldives</option>
+                    <option value="Mali">Mali</option>
+                    <option value="Malta">Malta</option>
+                    <option value="Marshall Islands">Marshall Islands</option>
+                    <option value="Martinique">Martinique</option>
+                    <option value="Mauritania">Mauritania</option>
+                    <option value="Mauritius">Mauritius</option>
+                    <option value="Mayotte">Mayotte</option>
+                    <option value="Mexico">Mexico</option>
+                    <option value="Midway Islands">Midway Islands</option>
+                    <option value="Moldova">Moldova</option>
+                    <option value="Monaco">Monaco</option>
+                    <option value="Mongolia">Mongolia</option>
+                    <option value="Montserrat">Montserrat</option>
+                    <option value="Morocco">Morocco</option>
+                    <option value="Mozambique">Mozambique</option>
+                    <option value="Myanmar">Myanmar</option>
+                    <option value="Nambia">Nambia</option>
+                    <option value="Nauru">Nauru</option>
+                    <option value="Nepal">Nepal</option>
+                    <option value="Netherland Antilles">Netherland Antilles</option>
+                    <option value="Netherlands">Netherlands (Holland, Europe)</option>
+                    <option value="Nevis">Nevis</option>
+                    <option value="New Caledonia">New Caledonia</option>
+                    <option value="New Zealand">New Zealand</option>
+                    <option value="Nicaragua">Nicaragua</option>
+                    <option value="Niger">Niger</option>
+                    <option value="Nigeria">Nigeria</option>
+                    <option value="Niue">Niue</option>
+                    <option value="Norfolk Island">Norfolk Island</option>
+                    <option value="Norway">Norway</option>
+                    <option value="Oman">Oman</option>
+                    <option value="Pakistan">Pakistan</option>
+                    <option value="Palau Island">Palau Island</option>
+                    <option value="Palestine">Palestine</option>
+                    <option value="Panama">Panama</option>
+                    <option value="Papua New Guinea">Papua New Guinea</option>
+                    <option value="Paraguay">Paraguay</option>
+                    <option value="Peru">Peru</option>
+                    <option value="Phillipines">Philippines</option>
+                    <option value="Pitcairn Island">Pitcairn Island</option>
+                    <option value="Poland">Poland</option>
+                    <option value="Portugal">Portugal</option>
+                    <option value="Puerto Rico">Puerto Rico</option>
+                    <option value="Qatar">Qatar</option>
+                    <option value="Republic of Montenegro">Republic of Montenegro</option>
+                    <option value="Republic of Serbia">Republic of Serbia</option>
+                    <option value="Reunion">Reunion</option>
+                    <option value="Romania">Romania</option>
+                    <option value="Russia">Russia</option>
+                    <option value="Rwanda">Rwanda</option>
+                    <option value="St Barthelemy">St Barthelemy</option>
+                    <option value="St Eustatius">St Eustatius</option>
+                    <option value="St Helena">St Helena</option>
+                    <option value="St Kitts-Nevis">St Kitts-Nevis</option>
+                    <option value="St Lucia">St Lucia</option>
+                    <option value="St Maarten">St Maarten</option>
+                    <option value="St Pierre & Miquelon">St Pierre & Miquelon</option>
+                    <option value="St Vincent & Grenadines">St Vincent & Grenadines</option>
+                    <option value="Saipan">Saipan</option>
+                    <option value="Samoa">Samoa</option>
+                    <option value="Samoa American">Samoa American</option>
+                    <option value="San Marino">San Marino</option>
+                    <option value="Sao Tome & Principe">Sao Tome & Principe</option>
+                    <option value="Saudi Arabia">Saudi Arabia</option>
+                    <option value="Senegal">Senegal</option>
+                    <option value="Seychelles">Seychelles</option>
+                    <option value="Sierra Leone">Sierra Leone</option>
+                    <option value="Singapore">Singapore</option>
+                    <option value="Slovakia">Slovakia</option>
+                    <option value="Slovenia">Slovenia</option>
+                    <option value="Solomon Islands">Solomon Islands</option>
+                    <option value="Somalia">Somalia</option>
+                    <option value="South Africa">South Africa</option>
+                    <option value="Spain">Spain</option>
+                    <option value="Sri Lanka">Sri Lanka</option>
+                    <option value="Sudan">Sudan</option>
+                    <option value="Suriname">Suriname</option>
+                    <option value="Swaziland">Swaziland</option>
+                    <option value="Sweden">Sweden</option>
+                    <option value="Switzerland">Switzerland</option>
+                    <option value="Syria">Syria</option>
+                    <option value="Tahiti">Tahiti</option>
+                    <option value="Taiwan">Taiwan</option>
+                    <option value="Tajikistan">Tajikistan</option>
+                    <option value="Tanzania">Tanzania</option>
+                    <option value="Thailand">Thailand</option>
+                    <option value="Togo">Togo</option>
+                    <option value="Tokelau">Tokelau</option>
+                    <option value="Tonga">Tonga</option>
+                    <option value="Trinidad & Tobago">Trinidad & Tobago</option>
+                    <option value="Tunisia">Tunisia</option>
+                    <option value="Turkey">Turkey</option>
+                    <option value="Turkmenistan">Turkmenistan</option>
+                    <option value="Turks & Caicos Is">Turks & Caicos Is</option>
+                    <option value="Tuvalu">Tuvalu</option>
+                    <option value="Uganda">Uganda</option>
+                    <option value="United Kingdom">United Kingdom</option>
+                    <option value="Ukraine">Ukraine</option>
+                    <option value="United Arab Erimates">United Arab Emirates</option>
+                    <option value="United States of America">United States of America</option>
+                    <option value="Uraguay">Uruguay</option>
+                    <option value="Uzbekistan">Uzbekistan</option>
+                    <option value="Vanuatu">Vanuatu</option>
+                    <option value="Vatican City State">Vatican City State</option>
+                    <option value="Venezuela">Venezuela</option>
+                    <option value="Vietnam">Vietnam</option>
+                    <option value="Virgin Islands (Brit)">Virgin Islands (Brit)</option>
+                    <option value="Virgin Islands (USA)">Virgin Islands (USA)</option>
+                    <option value="Wake Island">Wake Island</option>
+                    <option value="Wallis & Futana Is">Wallis & Futana Is</option>
+                    <option value="Yemen">Yemen</option>
+                    <option value="Zaire">Zaire</option>
+                    <option value="Zambia">Zambia</option>
+                    <option value="Zimbabwe">Zimbabwe</option>
+                </select>
+              </div>
+           </div>
+
+            <br><br><br>
+            <div class="form-group row">
+               <label for="cddref" class="col-sm-3 col-form-label" style="color: gray" >Tax</label>
+               <div class="col-sm-9">
+                <label for="--" class="col-sm-40 col-form-label" style="color: gray">---------------------------------------------</label>
+               </div>
+           </div>
+
+
+            <div class="form-group row">
+              <label for="utaxref" class="col-sm-3 col-form-label">Unique Tax Reference Number</label>
+              <div class="col-sm-9">
+                <input type="text" class="form-control" id="TaxReferenceNumber">
+              </div>
+           </div>
+
+
+            <div class="form-group row">
+              <label for="NInumber" class="col-sm-3 col-form-label">NIC Number</label>
+              <div class="col-sm-9">
+                <input type="text" class="form-control" id="NicNumber">
+              </div>
+           </div>
+
+
+            <div class="form-group row">
+               <label for="cddref" class="col-sm-3 col-form-label" style="color: gray" >VAT</label>
+               <div class="col-sm-9">
+                <label for="--" class="col-sm-40 col-form-label" style="color: gray">---------------------------------------------</label>
+               </div>
+           </div>
+
+
+            <div class="form-group row">
+              <label for="number" class="col-sm-3 col-form-label">Number</label>
+              <div class="col-sm-9">
+                <input type="text" class="form-control" id="Number">
+              </div>
+           </div>
+
+
+              <div class="form-group row">
+              <label for="regdate" class="col-sm-3 col-form-label">Registration Date</label>
+              <div class="col-sm-9">
+                <input class="form-control" type="date" id="RegistrationDate">
+              </div>
+           </div>
+
+
+            <div class="form-group row">
+              <label for="regdate" class="col-sm-3 col-form-label">Scheme Date</label>
+             <div class="col-sm-9">
+               <input class="form-control" type="date" id="SchemeDate">
+             </div>
+           </div>
+           </div>
+
+             <div class="col">
+
+             <div class="form-group row">
+               <label for="cddref" class="col-sm-3 col-form-label" style="color: gray" >Trading Address Details</label>
+               <div class="col-sm-9">
+                <label for="--" class="col-sm-40 col-form-label" style="color: gray">---------------------------------------------</label>
+               </div>
+             </div>
+
+             <div class="form-group row">
+               <label for="Taddress" class="col-sm-3 col-form-label">Trading Address</label>
+               <div class="col-sm-9">
+                  <textarea class="form-control" id="TrandingAddress" rows="3"></textarea>
+                 </div>
+            </div>
+
+
+             <div class="form-group row">
+              <label for="Tcity" class="col-sm-3 col-form-label">City</label>
+              <div class="col-sm-9">
+                <input type="text" class="form-control" id="TrandingCity">
+              </div>
+           </div>
+
+
+             <div hidden class="form-group row">
+              <label for="TRegion" class="col-sm-3 col-form-label">Region</label>
+              <div class="col-sm-9">
+                <input type="text" class="form-control" id="TrandingRegion">
+              </div>
+           </div>
+
+
+           <div class="form-group row">
+              <label for="Tcode" class="col-sm-3 col-form-label">Post Code</label>
+              <div class="col-sm-9">
+                <input type="text" class="form-control" id="TrandingPostCode">
+              </div>
+           </div>
+
+
+             <div class="form-group row">
+              <label for="TCountry" class="col-sm-3 col-form-label">Country</label>
+              <div class="col-sm-9">
+                <select type="text" class="form-control" id="TrandingCountry">
+
+                  <option value="Afganistan">Afghanistan</option>
+                    <option value="Albania">Albania</option>
+                    <option value="Algeria">Algeria</option>
+                    <option value="American Samoa">American Samoa</option>
+                    <option value="Andorra">Andorra</option>
+                    <option value="Angola">Angola</option>
+                    <option value="Anguilla">Anguilla</option>
+                    <option value="Antigua & Barbuda">Antigua & Barbuda</option>
+                    <option value="Argentina">Argentina</option>
+                    <option value="Armenia">Armenia</option>
+                    <option value="Aruba">Aruba</option>
+                    <option value="Australia">Australia</option>
+                    <option value="Austria">Austria</option>
+                    <option value="Azerbaijan">Azerbaijan</option>
+                    <option value="Bahamas">Bahamas</option>
+                    <option value="Bahrain">Bahrain</option>
+                    <option value="Bangladesh">Bangladesh</option>
+                    <option value="Barbados">Barbados</option>
+                    <option value="Belarus">Belarus</option>
+                    <option value="Belgium">Belgium</option>
+                    <option value="Belize">Belize</option>
+                    <option value="Benin">Benin</option>
+                    <option value="Bermuda">Bermuda</option>
+                    <option value="Bhutan">Bhutan</option>
+                    <option value="Bolivia">Bolivia</option>
+                    <option value="Bonaire">Bonaire</option>
+                    <option value="Bosnia & Herzegovina">Bosnia & Herzegovina</option>
+                    <option value="Botswana">Botswana</option>
+                    <option value="Brazil">Brazil</option>
+                    <option value="British Indian Ocean Ter">British Indian Ocean Ter</option>
+                    <option value="Brunei">Brunei</option>
+                    <option value="Bulgaria">Bulgaria</option>
+                    <option value="Burkina Faso">Burkina Faso</option>
+                    <option value="Burundi">Burundi</option>
+                    <option value="Cambodia">Cambodia</option>
+                    <option value="Cameroon">Cameroon</option>
+                    <option value="Canada">Canada</option>
+                    <option value="Canary Islands">Canary Islands</option>
+                    <option value="Cape Verde">Cape Verde</option>
+                    <option value="Cayman Islands">Cayman Islands</option>
+                    <option value="Central African Republic">Central African Republic</option>
+                    <option value="Chad">Chad</option>
+                    <option value="Channel Islands">Channel Islands</option>
+                    <option value="Chile">Chile</option>
+                    <option value="China">China</option>
+                    <option value="Christmas Island">Christmas Island</option>
+                    <option value="Cocos Island">Cocos Island</option>
+                    <option value="Colombia">Colombia</option>
+                    <option value="Comoros">Comoros</option>
+                    <option value="Congo">Congo</option>
+                    <option value="Cook Islands">Cook Islands</option>
+                    <option value="Costa Rica">Costa Rica</option>
+                    <option value="Cote DIvoire">Cote DIvoire</option>
+                    <option value="Croatia">Croatia</option>
+                    <option value="Cuba">Cuba</option>
+                    <option value="Curaco">Curacao</option>
+                    <option value="Cyprus">Cyprus</option>
+                    <option value="Czech Republic">Czech Republic</option>
+                    <option value="Denmark">Denmark</option>
+                    <option value="Djibouti">Djibouti</option>
+                    <option value="Dominica">Dominica</option>
+                    <option value="Dominican Republic">Dominican Republic</option>
+                    <option value="East Timor">East Timor</option>
+                    <option value="Ecuador">Ecuador</option>
+                    <option value="Egypt">Egypt</option>
+                    <option value="El Salvador">El Salvador</option>
+                    <option value="Equatorial Guinea">Equatorial Guinea</option>
+                    <option value="Eritrea">Eritrea</option>
+                    <option value="Estonia">Estonia</option>
+                    <option value="Ethiopia">Ethiopia</option>
+                    <option value="Falkland Islands">Falkland Islands</option>
+                    <option value="Faroe Islands">Faroe Islands</option>
+                    <option value="Fiji">Fiji</option>
+                    <option value="Finland">Finland</option>
+                    <option value="France">France</option>
+                    <option value="French Guiana">French Guiana</option>
+                    <option value="French Polynesia">French Polynesia</option>
+                    <option value="French Southern Ter">French Southern Ter</option>
+                    <option value="Gabon">Gabon</option>
+                    <option value="Gambia">Gambia</option>
+                    <option value="Georgia">Georgia</option>
+                    <option value="Germany">Germany</option>
+                    <option value="Ghana">Ghana</option>
+                    <option value="Gibraltar">Gibraltar</option>
+                    <option value="Great Britain">Great Britain</option>
+                    <option value="Greece">Greece</option>
+                    <option value="Greenland">Greenland</option>
+                    <option value="Grenada">Grenada</option>
+                    <option value="Guadeloupe">Guadeloupe</option>
+                    <option value="Guam">Guam</option>
+                    <option value="Guatemala">Guatemala</option>
+                    <option value="Guinea">Guinea</option>
+                    <option value="Guyana">Guyana</option>
+                    <option value="Haiti">Haiti</option>
+                    <option value="Hawaii">Hawaii</option>
+                    <option value="Honduras">Honduras</option>
+                    <option value="Hong Kong">Hong Kong</option>
+                    <option value="Hungary">Hungary</option>
+                    <option value="Iceland">Iceland</option>
+                    <option value="Indonesia">Indonesia</option>
+                    <option value="India">India</option>
+                    <option value="Iran">Iran</option>
+                    <option value="Iraq">Iraq</option>
+                    <option value="Ireland">Ireland</option>
+                    <option value="Isle of Man">Isle of Man</option>
+                    <option value="Israel">Israel</option>
+                    <option value="Italy">Italy</option>
+                    <option value="Jamaica">Jamaica</option>
+                    <option value="Japan">Japan</option>
+                    <option value="Jordan">Jordan</option>
+                    <option value="Kazakhstan">Kazakhstan</option>
+                    <option value="Kenya">Kenya</option>
+                    <option value="Kiribati">Kiribati</option>
+                    <option value="Korea North">Korea North</option>
+                    <option value="Korea Sout">Korea South</option>
+                    <option value="Kuwait">Kuwait</option>
+                    <option value="Kyrgyzstan">Kyrgyzstan</option>
+                    <option value="Laos">Laos</option>
+                    <option value="Latvia">Latvia</option>
+                    <option value="Lebanon">Lebanon</option>
+                    <option value="Lesotho">Lesotho</option>
+                    <option value="Liberia">Liberia</option>
+                    <option value="Libya">Libya</option>
+                    <option value="Liechtenstein">Liechtenstein</option>
+                    <option value="Lithuania">Lithuania</option>
+                    <option value="Luxembourg">Luxembourg</option>
+                    <option value="Macau">Macau</option>
+                    <option value="Macedonia">Macedonia</option>
+                    <option value="Madagascar">Madagascar</option>
+                    <option value="Malaysia">Malaysia</option>
+                    <option value="Malawi">Malawi</option>
+                    <option value="Maldives">Maldives</option>
+                    <option value="Mali">Mali</option>
+                    <option value="Malta">Malta</option>
+                    <option value="Marshall Islands">Marshall Islands</option>
+                    <option value="Martinique">Martinique</option>
+                    <option value="Mauritania">Mauritania</option>
+                    <option value="Mauritius">Mauritius</option>
+                    <option value="Mayotte">Mayotte</option>
+                    <option value="Mexico">Mexico</option>
+                    <option value="Midway Islands">Midway Islands</option>
+                    <option value="Moldova">Moldova</option>
+                    <option value="Monaco">Monaco</option>
+                    <option value="Mongolia">Mongolia</option>
+                    <option value="Montserrat">Montserrat</option>
+                    <option value="Morocco">Morocco</option>
+                    <option value="Mozambique">Mozambique</option>
+                    <option value="Myanmar">Myanmar</option>
+                    <option value="Nambia">Nambia</option>
+                    <option value="Nauru">Nauru</option>
+                    <option value="Nepal">Nepal</option>
+                    <option value="Netherland Antilles">Netherland Antilles</option>
+                    <option value="Netherlands">Netherlands (Holland, Europe)</option>
+                    <option value="Nevis">Nevis</option>
+                    <option value="New Caledonia">New Caledonia</option>
+                    <option value="New Zealand">New Zealand</option>
+                    <option value="Nicaragua">Nicaragua</option>
+                    <option value="Niger">Niger</option>
+                    <option value="Nigeria">Nigeria</option>
+                    <option value="Niue">Niue</option>
+                    <option value="Norfolk Island">Norfolk Island</option>
+                    <option value="Norway">Norway</option>
+                    <option value="Oman">Oman</option>
+                    <option value="Pakistan">Pakistan</option>
+                    <option value="Palau Island">Palau Island</option>
+                    <option value="Palestine">Palestine</option>
+                    <option value="Panama">Panama</option>
+                    <option value="Papua New Guinea">Papua New Guinea</option>
+                    <option value="Paraguay">Paraguay</option>
+                    <option value="Peru">Peru</option>
+                    <option value="Phillipines">Philippines</option>
+                    <option value="Pitcairn Island">Pitcairn Island</option>
+                    <option value="Poland">Poland</option>
+                    <option value="Portugal">Portugal</option>
+                    <option value="Puerto Rico">Puerto Rico</option>
+                    <option value="Qatar">Qatar</option>
+                    <option value="Republic of Montenegro">Republic of Montenegro</option>
+                    <option value="Republic of Serbia">Republic of Serbia</option>
+                    <option value="Reunion">Reunion</option>
+                    <option value="Romania">Romania</option>
+                    <option value="Russia">Russia</option>
+                    <option value="Rwanda">Rwanda</option>
+                    <option value="St Barthelemy">St Barthelemy</option>
+                    <option value="St Eustatius">St Eustatius</option>
+                    <option value="St Helena">St Helena</option>
+                    <option value="St Kitts-Nevis">St Kitts-Nevis</option>
+                    <option value="St Lucia">St Lucia</option>
+                    <option value="St Maarten">St Maarten</option>
+                    <option value="St Pierre & Miquelon">St Pierre & Miquelon</option>
+                    <option value="St Vincent & Grenadines">St Vincent & Grenadines</option>
+                    <option value="Saipan">Saipan</option>
+                    <option value="Samoa">Samoa</option>
+                    <option value="Samoa American">Samoa American</option>
+                    <option value="San Marino">San Marino</option>
+                    <option value="Sao Tome & Principe">Sao Tome & Principe</option>
+                    <option value="Saudi Arabia">Saudi Arabia</option>
+                    <option value="Senegal">Senegal</option>
+                    <option value="Seychelles">Seychelles</option>
+                    <option value="Sierra Leone">Sierra Leone</option>
+                    <option value="Singapore">Singapore</option>
+                    <option value="Slovakia">Slovakia</option>
+                    <option value="Slovenia">Slovenia</option>
+                    <option value="Solomon Islands">Solomon Islands</option>
+                    <option value="Somalia">Somalia</option>
+                    <option value="South Africa">South Africa</option>
+                    <option value="Spain">Spain</option>
+                    <option value="Sri Lanka">Sri Lanka</option>
+                    <option value="Sudan">Sudan</option>
+                    <option value="Suriname">Suriname</option>
+                    <option value="Swaziland">Swaziland</option>
+                    <option value="Sweden">Sweden</option>
+                    <option value="Switzerland">Switzerland</option>
+                    <option value="Syria">Syria</option>
+                    <option value="Tahiti">Tahiti</option>
+                    <option value="Taiwan">Taiwan</option>
+                    <option value="Tajikistan">Tajikistan</option>
+                    <option value="Tanzania">Tanzania</option>
+                    <option value="Thailand">Thailand</option>
+                    <option value="Togo">Togo</option>
+                    <option value="Tokelau">Tokelau</option>
+                    <option value="Tonga">Tonga</option>
+                    <option value="Trinidad & Tobago">Trinidad & Tobago</option>
+                    <option value="Tunisia">Tunisia</option>
+                    <option value="Turkey">Turkey</option>
+                    <option value="Turkmenistan">Turkmenistan</option>
+                    <option value="Turks & Caicos Is">Turks & Caicos Is</option>
+                    <option value="Tuvalu">Tuvalu</option>
+                    <option value="Uganda">Uganda</option>
+                    <option value="United Kingdom">United Kingdom</option>
+                    <option value="Ukraine">Ukraine</option>
+                    <option value="United Arab Erimates">United Arab Emirates</option>
+                    <option value="United States of America">United States of America</option>
+                    <option value="Uraguay">Uruguay</option>
+                    <option value="Uzbekistan">Uzbekistan</option>
+                    <option value="Vanuatu">Vanuatu</option>
+                    <option value="Vatican City State">Vatican City State</option>
+                    <option value="Venezuela">Venezuela</option>
+                    <option value="Vietnam">Vietnam</option>
+                    <option value="Virgin Islands (Brit)">Virgin Islands (Brit)</option>
+                    <option value="Virgin Islands (USA)">Virgin Islands (USA)</option>
+                    <option value="Wake Island">Wake Island</option>
+                    <option value="Wallis & Futana Is">Wallis & Futana Is</option>
+                    <option value="Yemen">Yemen</option>
+                    <option value="Zaire">Zaire</option>
+                    <option value="Zambia">Zambia</option>
+                    <option value="Zimbabwe">Zimbabwe</option>
+                </select>
+                </div>
+           </div>
+
+             <br><br><br>
+           <div class="form-group row">
+
+                <div class="col-sm-9">
+                  <label for="TCountry" class="col-sm-30 col-form-label" style="font-size: 15px">Staff Responsible</label>
+               </div>
+            </div>
+
+           <div class="form-group col-md-10" style="text-align: left">
+               <label for="partner">Staff Name</label>
+               <select id="OtherLevels" class="form-control">
+               </select>
+             </div>
+
+             </div>
+
+           </div>
+
+         </div>
+           </div>
+        </div>
+
+        <div class="modal-footer">
+          <div class="float-right">
+          <button style="display: none;" onclick="UpdateRecord(this.name)" id="clienteditbtn" type="button" class="btn btn-outline-warning">Update</button>
+          <button type="button" id="clientsavebtn" class="btn btn-outline-warning" onclick="InsertRecord()">Save</button></div><br>
+          <button type="button" data-target="#myModal" class="btn btn-outline-warning" data-dismiss="modal">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- Added / Deleted / Edited -->
+<div id="ClentModel" class="modal fade"  role="dialog">
+
+    <div class="modal-dialog modal-sm modal-dialog-centered">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <h4 class="modal-title"> Updating Client Details....</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <div class="text-center">
+             <i class="fa fa-check fa-4x mb-3 text-"></i>
+          </div>
+        <div id="ClientModelmessage" class='p-3 mb-2 text-black text-center'></div>
+        </div>
+        <div class="modal-footer">
+      </div>
+      </div>
+        </div>
+    </div>
+
+<script src="assets/bundles/lib.vendor.bundle.js"></script>
+<!--  Delete yes/no -->
+<div id="ClientModelDelete" class="modal fade" role="dialog">
+
+  <div class="modal-dialog modal-sm modal-dialog-centered">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h4 class="modal-title">Want to "DELETE"</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="text-center">
+           <i class="fa fa-trash fa-4x mb-3 text-"></i>
+        </div>
+      <div id="TaskModelmessage" class='p-3 mb-2 text-black text-center'></div>
+        This action can not be reversed. Do you still want to delete this client?
+      </div>
+      <div class="modal-footer">
+      <button type="button" id="deleteclientbtn" name="" onclick="DeleteRecord(this.name)" class="btn btn-outline-warning" data-dismiss="modal">Yes Delete</button>
+      <button type="button" class="btn btn-outline-warning" data-dismiss="modal">No Cancel</button>
+    </div>
+    </div>
+
+      </div>
+</div>
+<!-- ViewClient Model-->
+<div class="modal fade" id="ViewClient" role="dialog">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Client Profile Summary</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="model-body" style="overflow-y:auto;">
+            <div class="container-fluid">
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+              <li class="nav-item ">
+                  <a class="nav-link active profileTab" id="home-tab" data-toggle="tab" href="#LegalAddressDetails" role="tab" aria-controls="LegalAddressDetails" aria-selected="true">Legal Address Details</a>
+              </li>
+              <li class="nav-item ">
+                  <a class="nav-link profileTab" id="profile-tab" data-toggle="tab" href="#TradingAddressDetails" role="tab" aria-controls="TradingAddressDetails" aria-selected="false">Trading Address Details</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link profileTab" id="profile-tab" data-toggle="tab" href="#accounting" role="tab" aria-controls="accounting" aria-selected="false">Accounting</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link profileTab" id="profile-tab" data-toggle="tab" href="#Payroll" role="tab" aria-controls="Payroll" aria-selected="false">Payroll</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link profileTab" id="profile-tab" data-toggle="tab" href="#Tax" role="tab" aria-controls="Tax" aria-selected="false">Tax</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link profileTab" id="profile-tab" data-toggle="tab" href="#VAT" role="tab" aria-controls="VAT" aria-selected="false">VAT</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link profileTab" id="profile-tab" data-toggle="tab" href="#StaffResponsible" role="tab" aria-controls="StaffResponsible" aria-selected="false">Staff Responsible</a>
+              </li>
+            </ul>
+
+            <div class="col-md-8">
+                <div class="tab-content profile-tab" id="myTabContent">
+                  <div class="tab-pane fade show active" id="LegalAddressDetails" role="tabpanel" aria-labelledby="home-tab">
+                      <div class="row">
+                          <div class="col-md-6">
+                              <label>Legal Address</label>
+                          </div>
+                          <div class="col-md-6">
+                              <p id="pro_ClientLegalAddress"></p>
+                          </div>
+                      </div>
+                      <div class="row">
+                          <div class="col-md-6">
+                              <label>City</label>
+                          </div>
+                          <div class="col-md-6">
+                              <p id="pro_ClientLegalCity"></p>
+                          </div>
+                      </div>
+                      <div class="row">
+                          <div class="col-md-6">
+                              <label>Post Code
+                              </label>
+                          </div>
+                          <div class="col-md-6">
+                              <p id="pro_ClientLegalPostalCode"></p>
+                          </div>
+                      </div>
+                      <div class="row">
+                          <div class="col-md-6">
+                              <label>Country</label>
+                          </div>
+                          <div class="col-md-6">
+                              <p id="pro_ClientLegalCountry"></p>
+                          </div>
+                      </div>
+                    </div>
+                  <div class="tab-pane fade" id="TradingAddressDetails" role="tabpanel" aria-labelledby="profile-tab">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label >Trading Address</label>
+                            </div>
+                            <div class="col-md-6">
+                                <p id="pro_ClientTradingAddress"></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>City</label>
+                            </div>
+                            <div class="col-md-6">
+                                <p  id="pro_ClientTradingCity"></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Post Code
+                                </label>
+                            </div>
+                            <div class="col-md-6">
+                                <p  id="pro_ClientTradingPostalCode"></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Country</label>
+                            </div>
+                            <div class="col-md-6">
+                                <p  id="pro_ClientTradingCountry"></p>
+                            </div>
+                        </div>
+                    </div>
+                  <div class="tab-pane fade" id="accounting" role="tabpanel" aria-labelledby="profile-tab">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label >Year End(Day)</label>
+                        </div>
+                        <div class="col-md-6">
+                            <p id="pro_ClientYearEndDay"></p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label>Year End(Month)
+                            </label>
+                        </div>
+                        <div class="col-md-6">
+                            <p  id="pro_ClientYearEndMonth"></p>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="Payroll" role="tabpanel" aria-labelledby="profile-tab">
+                      <div class="row">
+                          <div class="col-md-6">
+                              <label >Reference</label>
+                          </div>
+                          <div class="col-md-6">
+                              <p id="pro_ClientPayrollRef"></p>
+                          </div>
+                      </div>
+                      <div class="row">
+                          <div class="col-md-6">
+                              <label>Collection Reference
+                              </label>
+                          </div>
+                          <div class="col-md-6">
+                              <p  id="pro_ClientPayrollCollectionRef"></p>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="tab-pane fade" id="Tax" role="tabpanel" aria-labelledby="profile-tab">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label >Unique Tax Reference Number</label>
+                        </div>
+                        <div class="col-md-6">
+                            <p id="pro_ClientTaxRef"> </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label>NIC Number
+                            </label>
+                        </div>
+                        <div class="col-md-6">
+                            <p  id="pro_ClientTaxNicNumber"></p>
+                        </div>
+                    </div>
+                    </div>
+                <div class="tab-pane fade" id="VAT" role="tabpanel" aria-labelledby="profile-tab">
+
+                  <div class="row">
+                      <div class="col-md-6">
+                          <label >Number</label>
+                      </div>
+                      <div class="col-md-6">
+                          <p id="pro_ClientVATNum"></p>
+                      </div>
+                  </div>
+                  <div class="row">
+                      <div class="col-md-6">
+                          <label>Registration Date
+                          </label>
+                      </div>
+                      <div class="col-md-6">
+                          <p  id="pro_ClientVATRegDate"></p>
+                      </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-6">
+                        <label>Scheme Date
+                        </label>
+                    </div>
+                    <div class="col-md-6">
+                        <p  id="pro_ClientVATSchemeDate"></p>
+                    </div>
+                </div>
+                </div>
+                <div class="tab-pane fade" id="StaffResponsible" role="tabpanel" aria-labelledby="profile-tab">
+                  <div class="row">
+                      <div class="col-md-6">
+                          <label >Position</label>
+                      </div>
+                      <div class="col-md-6">
+                          <p id="pro_ClientRespStaffPosition"></p>
+                      </div>
+                  </div>
+                  <div class="row">
+                      <div class="col-md-6">
+                          <label>Staff Name
+                          </label>
+                      </div>
+                      <div class="col-md-6">
+                          <p  id="pro_ClientRespStaffName"></p>
+                      </div>
+                  </div>
+                </div>
+                </div>
+            </div>
+            <form method="post">
+                <div class="row mt-5">
+                    <div class="col-md-4">
+                        <div class="profile-img">
+                            <img class="avatar" src="assets/images/sm/zm.png">
+                            <!-- <div class="file btn btn-lg btn-outline-warning">
+                                Change Photo
+                                <input type="file" name="file"/>
+                            </div> -->
+                        </div>
+                    </div>
+                    <div class="col-md-4 mt-3">
+                        <div class="profile-head">
+                          <h5 id="pro_clientName">
+
+                          </h5>
+                          <h6 id="pro_clientLegalName">
+
+                          </h6>
+                          <span class="badge badge-pill badge-warning" id="pro_clientType"></span>
+
+                          <span class="badge badge-secondary" id="pro_clientIndustry" data-toggle="tooltip" data-placement="bottom"  title="Client's Industry" > </span>
+                          <br/>
+                          <p class="card-text"  id="pro_ClientDescription"></p>
+
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                      <div class="row">
+                        <div class="col-md-12">
+
+                        <div class="card profileContacts" style="width: 18rem;">
+                          <div class="card-header"><b>
+                              Primary Contacts</b>
+                            </div>
+                            <div class="card-body">
+                              <h6 class="card-title" id="pro_ClientCode"></h6>
+                              <h6 class=" mb-2 " id="pro_ClientEmail"></h6>
+                              <br>
+                              <h6 class=" mb-2 " id="pro_ClientPhoneNumber"></h6>
+                              <br>
+                              <h6 class="mb-2 " id="pro_ClientCountry"></h6>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-12">
+                          <div class="custom-file " style=" width: 18rem;padding: 0 5px 0 5px;">
+                            <input type="file" class="custom-file-input" id="customFile">
+                            <label class="custom-file-label" for="customFile">Upload file</label>
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+
+            </form>
+
+            <ul class="nav nav-tabs mt-5" id="myTab" role="tablist">
+              <li class="nav-item ">
+              <a class="nav-link active profileTab" id="home-tab" data-toggle="tab" href="#ClientGeneral" role="tab" aria-controls="LegalAddressDetails" aria-selected="true">General Correspondence</a>
+              </li>
+              <li class="nav-item ">
+                  <a class="nav-link profileTab" id="profile-tab" data-toggle="tab" href="#ClientTasks" role="tab" aria-controls="TradingAddressDetails" aria-selected="false">Matters/Tasks </a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link profileTab" id="profile-tab" data-toggle="tab" href="#ClientLogTimes" role="tab" aria-controls="accounting" aria-selected="false">Time Recording</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link profileTab" id="profile-tab" data-toggle="tab" href="#ClientLogTimes" role="tab" aria-controls="accounting" aria-selected="false">Fee Income</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link profileTab" id="profile-tab" data-toggle="tab" href="#ClientUploads" role="tab" aria-controls="Payroll" aria-selected="false">Files sent to Client</a>
+                  </li>
+                 <li class="nav-item ">
+                <a class="nav-link profileTab" id="profile-tab" data-toggle="tab" href="#ClientUploads" role="tab" aria-controls="Payroll" aria-selected="false">Files sent by Client</a>
+
+              </li>
+            </ul>
+
+                <div class="tab-content">
+                  <div class="tab-pane fade show active" id="ClientGeneral" role="tabpanel">
+
+                    </div>
+
+                  <div class="tab-pane fade" id="ClientTasks" role="tabpanel">
+                    <div class="table-responsive" >
+
+                      <table id="dtBasicExample" class="table table table-hover table-vcenter text-nowrap table_custom border-style list" style="width:100%">
+                        <thead>
+                          <tr>
+                        <th class="th-sm">Task/Matter
+                          </th>
+                          <th class="th-sm">Assigned to
+                          </th>
+                          <th class="th-sm">Deadline
+                          </th>
+                          <th class="th-sm">Planned start date
+                          </th>
+                          <th class="th-sm">Completion date
+                          </th>
+                          <th class="th-sm">Completion Status
+                          </th>
+                          </tr>
+                      <thead>
+                      <tbody id ="ClientsTasksLists">
+                      </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="ClientLogTimes" role="tabpanel" >
+                    <div class="table-responsive" >
+                      <table id="dtBasicExample" class="table table table-hover table-vcenter text-nowrap table_custom border-style list" style="width:100%">
+                        <thead>
+                          <tr>
+                            <th class="th-sm">Task
+                          </th>
+                          <th class="th-sm">Entry Date
+                          </th>
+                          <th class="th-sm">Last Time Recorded
+                          </th>
+                          <th class="th-sm">Recorded By
+                          </th>
+                          </tr>
+                      </thead>
+                      <tbody id ="ClientLogTimesLists">
+                      </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="ClientUploads" role="tabpanel" >
+                  </div>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="modal-footer">
+        <button type="button" class="btn btn-outline-warning" data-dismiss="modal">Close</button>
+      </div>
+
+      </div>
+    </div>
+
+  </div>
+
+<script src="assets/plugins/dropify/js/dropify.min.js"></script>
+
+</div>
+
+<!-- Acess Modal -->
+<div id="ClientsAcessModal" class="modal fade " role="dialog">
+
+  <div class="modal-dialog modal-sm modal-dialog-centered ">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h4 class="modal-title">Clients</h4>
+      </div>
+      <div class="modal-body">
+        <div class="text-center">
+           <i class="fa fa-window-close-o fa-4x mb-3 text-"></i>
+        </div>
+      <div id="SettingModelmessage" class='p-3 mb-2 text-black text-center'>
+      You do not have access to this page. Please contact our support team to upgrade your account
+      </div>
+      </div>
+      <div class="modal-footer">
+    <center><a href="index.html"><button type="button" class="btn btn-default">OK</button></a></center>
+    </div>
+    </div>
+
+      </div>
+</div>
+
+
+<script src="assets/bundles/lib.vendor.bundle.js"></script>
+<script src="assets/js/core.js"></script>
+<script src="assets/js/form/dropify.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-auth.js"></script>
+<script src="actionsjs/config.js"></script>
+<script src="actionsjs/client.js"></script>
+<link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/css/bootstrap4-toggle.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/js/bootstrap4-toggle.min.js"></script>
+<script src="actionsjs/UserPrivileges.js"></script>
+</body>
+
+
+</html>

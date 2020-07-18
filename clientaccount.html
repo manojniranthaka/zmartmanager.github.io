@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Client Area</title>
+	<meta charset="UTF-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+	<link rel="icon" type="image/png" />
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="login/vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="login/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="login/vendor/animate/animate.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="login/vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="login/vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="login/css/util.css">
+	<link rel="stylesheet" type="text/css" href="login/css/main.css">
+<!--===============================================================================================-->
+</head>
+<body>
+	<div class="limiter">
+		<div class="container-login100">
+
+			<div class="wrap-login100" style="padding:30px 10px; width:80%;">
+	<div class="container"style="width:80%;">
+					<div class="float-left">
+					<a href=""><button type="button" class="btn btn-outline-success">small admin Image</button></a>
+					</div>
+				<div class="container">
+					<div class="float-right">
+				<a href="login.html"><button type="button" class="btn btn-danger">Logout</button></a>
+					</div>
+					<span class="login100-form-title" id="welcomemessage">
+					</span>
+
+					<div class="alert alert-warning" role="alert">
+					  Your Profile Summary
+					</div>
+
+        </div>
+        <div class="model-body" style="overflow-y:auto;">
+            <div class="container-fluid">
+							<div class="model-body" style="overflow-y:auto;">
+			            <div class="container-fluid">
+			            <ul class="nav nav-tabs" id="myTab" role="tablist">
+
+			              <li class="nav-item ">
+			                  <a class="nav-link active profileTab" id="home-tab" data-toggle="tab" href="#AddressDetails" role="tab" aria-controls="AddressDetails" aria-selected="true">Address Details</a>
+			              </li>
+
+			              <li class="nav-item ">
+			                <a class="nav-link profileTab" id="profile-tab" data-toggle="tab" href="#Accounting" role="tab" aria-controls="Accounting" aria-selected="false">Accounting</a>
+			              </li>
+			              <li class="nav-item ">
+			                <a class="nav-link profileTab" id="profile-tab" data-toggle="tab" href="#Payroll" role="tab" aria-controls="Payroll" aria-selected="false">Payroll</a>
+			              </li>
+			              <li class="nav-item ">
+			                <a class="nav-link profileTab" id="profile-tab" data-toggle="tab" href="#Tax" role="tab" aria-controls="Tax" aria-selected="false">Tax</a>
+			              </li>
+			              <li class="nav-item ">
+			                <a class="nav-link profileTab" id="profile-tab" data-toggle="tab" href="#VAT" role="tab" aria-controls="VAT" aria-selected="false">VAT</a>
+			              </li>
+			              <li class="nav-item ">
+			                <a class="nav-link profileTab" id="profile-tab" data-toggle="tab" href="#FirmContacts" role="tab" aria-controls="FirmContacts" aria-selected="false">Firm Contacts</a>
+			              </li>
+			            </ul>
+
+			            <div class="col-md-8">
+			                <div class="tab-content profile-tab" id="myTabContent">
+			                  <div class="tab-pane fade show active" id="AddressDetails" role="tabpanel" aria-labelledby="home-tab">
+			                      <div class="row">
+			                          <div class="col-md-6">
+			                              <label>Legal Address</label>
+			                          </div>
+			                          <div class="col-md-6">
+			                              <p id="pro_ClientLegalAddress"></p>
+			                          </div>
+			                      </div>
+			                      <div class="row">
+			                          <div class="col-md-6">
+			                              <label>City</label>
+			                          </div>
+			                          <div class="col-md-6">
+			                              <p id="pro_ClientLegalCity"></p>
+			                          </div>
+			                      </div>
+			                      <div class="row">
+			                          <div class="col-md-6">
+			                              <label>Post Code
+			                              </label>
+			                          </div>
+			                          <div class="col-md-6">
+			                              <p id="pro_ClientLegalPostalCode"></p>
+			                          </div>
+			                      </div>
+			                      <div class="row">
+			                          <div class="col-md-6">
+			                              <label>Country</label>
+			                          </div>
+			                          <div class="col-md-6">
+			                              <p id="pro_ClientLegalCountry"></p>
+			                          </div>
+			                      </div>
+			                    </div>
+			                  <div class="tab-pane fade" id="Accounting" role="tabpanel" aria-labelledby="profile-tab">
+			                    <div class="row">
+			                        <div class="col-md-6">
+			                            <label >Year End(Day)</label>
+			                        </div>
+			                        <div class="col-md-6">
+			                            <p id="pro_ClientYearEndDay"></p>
+			                        </div>
+			                    </div>
+			                    <div class="row">
+			                        <div class="col-md-6">
+			                            <label>Year End(Month)
+			                            </label>
+			                        </div>
+			                        <div class="col-md-6">
+			                            <p  id="pro_ClientYearEndMonth"></p>
+			                        </div>
+			                    </div>
+			                  </div>
+			                  <div class="tab-pane fade" id="Payroll" role="tabpanel" aria-labelledby="profile-tab">
+			                      <div class="row">
+			                          <div class="col-md-6">
+			                              <label >Reference</label>
+			                          </div>
+			                          <div class="col-md-6">
+			                              <p id="pro_ClientPayrollRef"></p>
+			                          </div>
+			                      </div>
+			                      <div class="row">
+			                          <div class="col-md-6">
+			                              <label>Collection Reference
+			                              </label>
+			                          </div>
+			                          <div class="col-md-6">
+			                              <p  id="pro_ClientPayrollCollectionRef"></p>
+			                          </div>
+			                      </div>
+			                  </div>
+			                  <div class="tab-pane fade" id="Tax" role="tabpanel" aria-labelledby="profile-tab">
+			                    <div class="row">
+			                        <div class="col-md-6">
+			                            <label >Unique Tax Reference Number</label>
+			                        </div>
+			                        <div class="col-md-6">
+			                            <p id="pro_ClientTaxRef"> </p>
+			                        </div>
+			                    </div>
+			                    <div class="row">
+			                        <div class="col-md-6">
+			                            <label>NIC Number
+			                            </label>
+			                        </div>
+			                        <div class="col-md-6">
+			                            <p  id="pro_ClientTaxNicNumber"></p>
+			                        </div>
+			                    </div>
+			                    </div>
+			                	<div class="tab-pane fade" id="VAT" role="tabpanel" aria-labelledby="profile-tab">
+
+							                  <div class="row">
+							                      <div class="col-md-6">
+							                          <label >Number</label>
+							                      </div>
+							                      <div class="col-md-6">
+							                          <p id="pro_ClientVATNum"></p>
+							                      </div>
+							                  </div>
+							                  <div class="row">
+							                      <div class="col-md-6">
+							                          <label>Registration Date
+							                          </label>
+							                      </div>
+							                      <div class="col-md-6">
+							                          <p  id="pro_ClientVATRegDate"></p>
+							                      </div>
+							                  </div>
+
+							                  <div class="row">
+							                    <div class="col-md-6">
+							                        <label>Scheme Date
+							                        </label>
+							                    </div>
+							                    <div class="col-md-6">
+							                        <p  id="pro_ClientVATSchemeDate"></p>
+							                    </div>
+							                </div>
+			                		</div>
+												<div class="tab-pane fade" id="FirmContacts" role="tabpanel" aria-labelledby="profile-tab">
+															<div class="row">
+						                      <div class="col-md-6">
+						                          <label >Position</label>
+						                      </div>
+						                      <div class="col-md-6">
+						                          <p id="pro_ClientRespStaffPosition"></p>
+						                      </div>
+						                  </div>
+						                  <div class="row">
+							                      <div class="col-md-6">
+							                          <label>Staff Name
+							                          </label>
+							                      </div>
+							                      <div class="col-md-6">
+							                          <p  id="pro_ClientRespStaffName"></p>
+							                      </div>
+			                  			</div>
+			                	</div>
+			               </div>
+			            </div>
+			          </div>
+
+
+			        </div>
+
+					<div class="form-group">
+				  	<table style="width:100%">
+				  <tr>
+				    <td>
+
+				<div style="width:100%;">
+
+
+							<h6 hidden>Client ID (For office use only)</h6>
+							<input disabled hidden  type="text"class="form-control" id="ClientID" placeholder="Client ID"/><br>
+
+							<h6>Our File Name</h6>
+							<input disabled  type="text"class="form-control" id="ClientName" placeholder="Client Name"/><br>
+
+							<h6>Client Code (Our reference)</h6>
+							<input disabled  type="text"class="form-control" id="ClientCode" placeholder="Client Code"/><br>
+				      <h6>Document Name</h6>
+				      <input type="text"class="form-control" id="FileName" placeholder="File Name"/><br>
+
+				      <h6>Upload Doc</h6>
+				      <input type="file" class="form-control" id="filechooser"/>
+							<div class="progress">
+							<div class="progress-bar bg-success" id="progressbar"  value="50" role="progressbar"></div>
+							</div>
+							<p> *Note - if you have multiple files to upload, upload them as .zip file. </p>
+				  	   </div></td>
+				      <td><div style="width:90%;">
+					   </div></td>
+				  </tr>
+				</table>
+				</form>
+				    </div>
+				    <div style="width:100%;">
+				      <input type="button"  value="Upload File" onclick="FileUploadApi()" class="btn btn-warning"/>
+				  </div><br>
+				<div class="alert alert-warning" role="alert">
+				Your Communication History
+				</div>
+
+				<ul class="nav nav-tabs mt-5" id="myTab" role="tablist">
+					<li class="nav-item ">
+					<a class="nav-link active profileTab" id="home-tab" data-toggle="tab" href="#FilesReceived" role="tab" aria-controls="FilesReceived" aria-selected="true">Files Received from (Firm Name)</a>
+					</li>
+					<li class="nav-item ">
+							<a class="nav-link profileTab" id="profile-tab" data-toggle="tab" href="#FilesSent" role="tab" aria-controls="FilesSent" aria-selected="false">Files Sent by you </a>
+					</li>
+					<li class="nav-item ">
+						<a class="nav-link profileTab" id="profile-tab" data-toggle="tab" href="#Matters" role="tab" aria-controls="Matters" aria-selected="false">Matters</a>
+					</li>
+					<li class="nav-item ">
+						<a class="nav-link profileTab" id="profile-tab" data-toggle="tab" href="#Notifications" role="tab" aria-controls="Notifications" aria-selected="false">Notifications</a>
+					</li>
+				</ul>
+
+				<div class="tab-content">
+
+				 <div class="tab-pane fade show active" id="FilesReceived" role="tabpanel">
+
+				 </div>
+					<div class="tab-pane fade" id="FilesSent" role="tabpanel">
+						<div class="table-responsive" >
+							<table id ="" class="table">
+							<thead>
+								<tr>
+									<th>File Name</th>
+									<th>Date Added</th>
+										<th>Time Added</th>
+										<th>Download</th>
+										<th>Remove</th>
+								</tr>
+							</thead>
+							<tbody id ="uploadedfilelist">
+							</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="tab-pane fade" id="Matters" role="tabpanel" >
+						<div class="table-responsive" >
+							<table id="dtBasicExample" class="table table table-hover table-vcenter text-nowrap table_custom border-style list" style="width:100%">
+								<thead>
+									<tr>
+										<th class="th-sm">Task
+									</th>
+									<th class="th-sm">Entry Date
+									</th>
+									<th class="th-sm">Last Time Recorded
+									</th>
+									<th class="th-sm">Recorded By
+									</th>
+									</tr>
+							</thead>
+							<tbody id ="ClientLogTimesLists">
+							</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="tab-pane fade" id="Notifications" role="tabpanel" >
+					</div>
+				</div>
+
+						<nav aria-label="Page navigation">
+				  <ul class="pagination">
+				    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+				    <li class="page-item"><a class="page-link" href="#">1</a></li>
+				    <li class="page-item"><a class="page-link" href="#">2</a></li>
+				    <li class="page-item"><a class="page-link" href="#">3</a></li>
+				    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+				  </ul>
+				</nav>
+						</div>
+						<div class="alert alert-warning" role="alert">
+  General Messages
+</div>
+<div class="row">
+  <div class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Special title </h5>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <a href="#" class="btn btn-warning">Go </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-6">
+    <div class="card" >
+  <div class="card-header">
+    Featured
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Cras justo odio</li>
+    <li class="list-group-item">Dapibus ac facilisis in</li>
+    <li class="list-group-item">Vestibulum at eros</li>
+  </ul>
+</div>
+</div>
+
+			</div>
+		</div>
+	</div>
+
+<!--===============================================================================================-->
+	<script src="login/vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="login/vendor/bootstrap/js/popper.js"></script>
+	<script src="login/vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="login/vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="login/vendor/tilt/tilt.jquery.min.js"></script>
+	<script >
+		$('.js-tilt').tilt({
+			scale: 1.1
+		})
+	</script>
+<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+<script src="assets/bundles/lib.vendor.bundle.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-analytics.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-firestore.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-storage.js"></script>
+	<script src="actionsjs/config.js"></script>
+	<script src="actionsjs/clientaccount.js"></script>
+</body>
+</html>

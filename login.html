@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Login</title>
+	<meta charset="UTF-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="login/images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="login/vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="login/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="login/vendor/animate/animate.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="login/vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="login/vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="login/css/util.css">
+	<link rel="stylesheet" type="text/css" href="login/css/main.css">
+<!--===============================================================================================-->
+</head>
+<body>
+
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100">
+				<div>
+				<iframe width="400" height="215" src="https://www.youtube.com/embed/w6kRYZk9R5A" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				</div>
+
+				<form class="login100-form validate-form" name="myform">
+					<span class="login100-form-title">
+						Welcome to ZmartManager
+					</span>
+
+					<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+						<input class="input100" type="text" id="useremail" placeholder="Email">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-envelope" aria-hidden="true"></i>
+						</span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate = "Password is required">
+						<input class="input100" type="password" id="userpass" placeholder="Password">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-lock" aria-hidden="true"></i>
+						</span>
+					</div>
+
+					<div class="container-login100-form-btn">
+						<input type="button" onclick="Login()" class="login100-form-btn" value="Login">
+					</div>
+
+					<div class="text-center p-t-12">
+						<span class="txt1">
+							Forgot
+						</span>
+						<a class="txt2" data-toggle="modal" data-target="#ForgetPassword" href="#">
+							 Password?
+						</a>
+					</div>
+
+					<div class="text-center p-t-136" >
+						<a class="txt2" href="#" data-toggle="modal" data-target="#RegisterAdmin">
+							Don't have a log in? Create an Account
+							<i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
+						</a>
+						</div>
+						<div class="text-center" >
+							<a class="txt2" href="#" data-toggle="modal" data-target="#Clientlogin">
+								Client Login
+								<i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
+							</a>
+							</div>
+							<div class="text-center ">
+						<a class="txt2" href="https://www.youtube.com/watch?v=w6kRYZk9R5A" target="_blank">
+							Watch intro Video
+							<i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
+							</a>
+							</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<!-- Register-->
+	<div id="RegisterAdmin" class="modal fade" role="dialog">
+
+	  <div class="modal-dialog modal-l modal-dialog-centered" role="document">
+	    <!-- Modal content-->
+	    <div class="modal-content">
+
+	      <div class="modal-header">
+	        <h4 class="modal-title">ZmartManager </h4>
+	        <button type="button" class="close" data-dismiss="modal">&times;</button>
+	      </div>
+	      <div class="modal-body">
+					<span class="login100-form-title">
+						Register
+					</span>
+					<form id="userregform">
+					<div class="wrap-input100 validate-input">
+						<input class="input100" type="text" id="Rusername" placeholder="User Name">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-user" aria-hidden="true"></i>
+						</span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+						<input class="input100" type="text" id="Ruseremail" placeholder="Email">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-envelope" aria-hidden="true"></i>
+						</span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate = "Password is required">
+						<input class="input100" type="password" id="Ruserpass" placeholder="Password">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-lock" aria-hidden="true"></i>
+						</span>
+					</div>
+				</form>
+					<div class="container-login100-form-btn">
+						<input type="button" onclick="RegisterAdmin()" class="login100-form-btn" value="Register">
+					</div>
+
+	      </div>
+	      <div class="modal-footer">
+	    <center><button type="button" class="btn btn-default " data-dismiss="modal">Close</button></center>
+	    </div>
+	    </div>
+
+	      </div>
+	   </div>
+
+
+	<script src="assets/bundles/lib.vendor.bundle.js"></script>
+
+	<!-- Client Login-->
+	<div id="Clientlogin" class="modal fade" role="dialog">
+
+	  <div class="modal-dialog modal-l modal-dialog-centered" role="document">
+	    <!-- Modal content-->
+	    <div class="modal-content">
+
+	      <div class="modal-header">
+	        <h4 class="modal-title">ZmartManager </h4>
+	        <button type="button" class="close" data-dismiss="modal">&times;</button>
+	      </div>
+	      <div class="modal-body">
+					<span class="login100-form-title">
+						Client Login
+					</span>
+					<form id="userregform">
+					<p id="ErrorAlert"></p>
+					<div class="wrap-input100 validate-input">
+						<input class="input100" type="text" id="ClientEmail" placeholder="User Email">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-user" aria-hidden="true"></i>
+						</span>
+					</div>
+					<div class="wrap-input100 validate-input" data-validate = "Password">
+						<input class="input100" type="password" id="ClientPassword" placeholder="Password">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-lock" aria-hidden="true"></i>
+						</span>
+					</div>
+				</form>
+					<div class="container-login100-form-btn">
+						<input type="button" onclick="ClientLogin()" class="login100-form-btn" value="Login">
+					</div>
+
+	      </div>
+	      <div class="modal-footer">
+	    <center><button type="button"  class="btn btn-default " data-dismiss="modal">Close</button></center>
+	    </div>
+	    </div>
+
+	      </div>
+	 </div>
+
+	<!-- ForgetPassword-->
+	<div id="ForgetPassword" class="modal fade" role="dialog">
+
+	  <div class="modal-dialog modal-l modal-dialog-centered" role="document">
+	    <!-- Modal content-->
+	    <div class="modal-content">
+
+	      <div class="modal-header">
+	        <h4 class="modal-title">ZmartManager </h4>
+	        <button type="button" class="close" data-dismiss="modal">&times;</button>
+	      </div>
+	      <div class="modal-body">
+					<span class="login100-form-title">
+						Forgot Password?
+					</span>
+					<form id="">
+
+					<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+						<input class="input100" type="text" id="forgetemail" placeholder="Enter Your Email">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-envelope" aria-hidden="true"></i>
+						</span>
+					</div>
+
+				</form>
+					<div class="container-login100-form-btn">
+						<input type="button" onclick="ForgetPassword()" class="login100-form-btn" value="Reset Password">
+					</div>
+
+	      </div>
+	      <div class="modal-footer">
+	    <center><button type="button" class="btn btn-default " data-dismiss="modal">Close</button></center>
+	    </div>
+	    </div>
+
+	      </div>
+	   </div>
+
+
+	<script src="assets/bundles/lib.vendor.bundle.js"></script>
+
+<!--===============================================================================================-->
+	<script src="login/vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="login/vendor/bootstrap/js/popper.js"></script>
+	<script src="login/vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="login/vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="login/vendor/tilt/tilt.jquery.min.js"></script>
+	<script >
+		$('.js-tilt').tilt({
+			scale: 1.1
+		})
+	</script>
+<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+<script src="assets/bundles/lib.vendor.bundle.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-analytics.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-firestore.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-auth.js"></script>
+
+	<script src="actionsjs/config.js"></script>
+	<script src="actionsjs/login.js"></script>
+
+</body>
+</html>
