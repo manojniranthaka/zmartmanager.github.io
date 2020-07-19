@@ -27,13 +27,17 @@
 		<div class="container-login100">
 
 			<div class="wrap-login100" style="padding:30px 10px; width:80%;">
-	<div class="container"style="width:80%;">
+				<div class="container"style="width:80%;">
 					<div class="float-left">
-					<a href=""><button type="button" class="btn btn-outline-success">small admin Image</button></a>
+					<a href=""><button type="button" class="btn btn-outline-success">small admin Image</button>
+						<div class="float-right">
+						<span class="badge badge-warning" id="ClientCode"></span>
+						</div>
+					</a>
 					</div>
 				<div class="container">
 					<div class="float-right">
-				<a href="login.html"><button type="button" class="btn btn-danger">Logout</button></a>
+					<a href="login.html"><button type="button" class="btn btn-danger">Logout</button></a>
 					</div>
 					<span class="login100-form-title" id="welcomemessage">
 					</span>
@@ -43,9 +47,8 @@
 					</div>
 
         </div>
-        <div class="model-body" style="overflow-y:auto;">
+
             <div class="container-fluid">
-							<div class="model-body" style="overflow-y:auto;">
 			            <div class="container-fluid">
 			            <ul class="nav nav-tabs" id="myTab" role="tablist">
 
@@ -217,9 +220,6 @@
 			            </div>
 			          </div>
 
-
-			        </div>
-
 					<div class="form-group">
 				  	<table style="width:100%">
 				  <tr>
@@ -227,34 +227,29 @@
 
 				<div style="width:100%;">
 
-
 							<h6 hidden>Client ID (For office use only)</h6>
 							<input disabled hidden  type="text"class="form-control" id="ClientID" placeholder="Client ID"/><br>
 
 							<h6>Our File Name</h6>
 							<input disabled  type="text"class="form-control" id="ClientName" placeholder="Client Name"/><br>
 
-							<h6>Client Code (Our reference)</h6>
-							<input disabled  type="text"class="form-control" id="ClientCode" placeholder="Client Code"/><br>
+							<form id="fileuploadform">
 				      <h6>Document Name</h6>
 				      <input type="text"class="form-control" id="FileName" placeholder="File Name"/><br>
-
 				      <h6>Upload Doc</h6>
 				      <input type="file" class="form-control" id="filechooser"/>
+							</form>
 							<div class="progress">
 							<div class="progress-bar bg-success" id="progressbar"  value="50" role="progressbar"></div>
 							</div>
 							<p> *Note - if you have multiple files to upload, upload them as .zip file. </p>
 				  	   </div></td>
-				      <td><div style="width:90%;">
-					   </div></td>
-				  </tr>
-				</table>
-				</form>
+						 	</tr>
+						</table>
+					</form>
+					 <button type="button" onclick="FileUploadApi()" id="uploadbutton" class="btn btn-warning">Upload File</button>
 				    </div>
-				    <div style="width:100%;">
-				      <input type="button"  value="Upload File" onclick="FileUploadApi()" class="btn btn-warning"/>
-				  </div><br>
+				 <br>
 				<div class="alert alert-warning" role="alert">
 				Your Communication History
 				</div>
@@ -277,7 +272,18 @@
 				<div class="tab-content">
 
 				 <div class="tab-pane fade show active" id="FilesReceived" role="tabpanel">
-
+					 <table id ="" class="table">
+					 <thead>
+						 <tr>
+							 <th>File Name</th>
+							 <th>Date Added</th>
+								 <th>Time Added</th>
+								 <th>Download</th>
+						 </tr>
+					 </thead>
+					 <tbody id ="receivedfilelist">
+					 </tbody>
+					 </table>
 				 </div>
 					<div class="tab-pane fade" id="FilesSent" role="tabpanel">
 						<div class="table-responsive" >
@@ -297,30 +303,45 @@
 						</div>
 					</div>
 					<div class="tab-pane fade" id="Matters" role="tabpanel" >
-						<div class="table-responsive" >
-							<table id="dtBasicExample" class="table table table-hover table-vcenter text-nowrap table_custom border-style list" style="width:100%">
-								<thead>
-									<tr>
-										<th class="th-sm">Task
-									</th>
-									<th class="th-sm">Entry Date
-									</th>
-									<th class="th-sm">Last Time Recorded
-									</th>
-									<th class="th-sm">Recorded By
-									</th>
-									</tr>
-							</thead>
-							<tbody id ="ClientLogTimesLists">
-							</tbody>
-							</table>
+						<div class="table-responsive">
+								<table class="table table table-hover table-vcenter text-nowrap table_custom border-style list">
+										<thead>
+												<tr>
+														<th>Task Name</th>
+														<th>Task Opened</th>
+														<th>Records</th>
+														<th>Complete</th>
+														<th>Deadline</th>
+														<th>Assign To</th>
+														<th>Days Left</th>
+												</tr>
+										</thead>
+										<tbody id="MattersTableBody">
+
+										</tbody>
+								</table>
 						</div>
 					</div>
 					<div class="tab-pane fade" id="Notifications" role="tabpanel" >
+
+						<div class="table-responsive">
+								<table class="table table table-hover table-vcenter text-nowrap table_custom border-style list">
+										<thead>
+												<tr>
+														<th>Planned start date</th>
+														<th>Notes</th>
+												</tr>
+										</thead>
+										<tbody id="NotificationsTableBody">
+
+										</tbody>
+								</table>
+						</div>
 					</div>
 				</div>
 
-						<nav aria-label="Page navigation">
+				<!--
+				<nav aria-label="Page navigation">
 				  <ul class="pagination">
 				    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
 				    <li class="page-item"><a class="page-link" href="#">1</a></li>
@@ -328,7 +349,7 @@
 				    <li class="page-item"><a class="page-link" href="#">3</a></li>
 				    <li class="page-item"><a class="page-link" href="#">Next</a></li>
 				  </ul>
-				</nav>
+				</nav> -->
 						</div>
 						<div class="alert alert-warning" role="alert">
   General Messages
@@ -358,7 +379,7 @@
 </div>
 
 			</div>
-		</div>
+
 	</div>
 
 <!--===============================================================================================-->

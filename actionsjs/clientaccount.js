@@ -1,7 +1,9 @@
 var db = firebase.firestore();
 var ClientDocId = localStorage.getItem("ClientDocID");
 const Uploadedfilelist = document.getElementById("uploadedfilelist");
-
+const MattersTableBody = document.getElementById("MattersTableBody");
+const NotificationsTableBody = document.getElementById("NotificationsTableBody");
+$('#fileuploadform')[0].reset();
 var ClientDocID = $("#ClientID").val();
 var UploadFileName = $("#FileName").val();
 var UClientName = $("#ClientName").val();
@@ -11,6 +13,7 @@ LoadClientDetalis();
 LoaodClientUploadList();
 LoaodClientUploadList(ClientDocId);
 LoadDataToProfileView(String(ClientDocId));
+LoadClientTaskTable(UClientName);
 
 function LoadClientDetalis(){
 
@@ -25,7 +28,7 @@ docRef.get().then(function(doc) {
       $("#welcomemessage").html("Hello "+doc.data().ClientName+"!");
       $("#ClientID").val(doc.data().docid);
       $("#ClientName").val(doc.data().ClientName);
-      $("#ClientCode").val(doc.data().ClientCode);
+      $("#ClientCode").html(doc.data().ClientCode);
 
     } else {
       window.alert("Something Went Worng ,Contact Your Service Provider !")
@@ -41,12 +44,9 @@ docRef.get().then(function(doc) {
 
 function FileUploadApi(){
 
+  var UploadFileName = $("#FileName").val();
   var clientfile = document.getElementById("filechooser");
 
-  if(UploadFileName == ""){
-
-    $("#FileName").focus();
-  }else {
   			// get file
   	  var file = clientfile.files[0];
 
@@ -103,7 +103,7 @@ function FileUploadApi(){
 
   				});
 
-      }
+
 
 }
 
@@ -113,7 +113,8 @@ function SaveUploadData(CID,CName,CCode,FileName,ADate,CFilepath,Dlink){
 
   docRef.set({
 
-          docid:CID,
+          docid:docRef.id,
+          ClientId:CID,
           ClientName:CName,
           ClientCode:CCode,
           FileName:FileName,
@@ -125,6 +126,7 @@ function SaveUploadData(CID,CName,CCode,FileName,ADate,CFilepath,Dlink){
   })
   .then(function() {
       console.log("Document written ! ");
+      $('#fileuploadform')[0].reset();
     })
   .catch(function(error) {
       console.error("Error adding document: ", error);
@@ -143,7 +145,7 @@ function LoaodClientUploadList(CDocID){
                 "<tr><td>"+change.doc.data().FileName+
                 "</td><td>"+change.doc.data().AddedDate+
                 "</td><td>"+change.doc.data().AddedTime+
-                "</td><td><a href=\""+change.doc.data().DownloadLink+"\" download><button class=\"btn btn-warning\">Downlaod</button></a>"+
+                "</td><td><a href=\""+change.doc.data().DownloadLink+"\" target=\"_blank\" download><button class=\"btn btn-warning\">Downlaod</button></a>"+
                 "</td><td><button id=\""+change.doc.data().docid+"\" name=\""+change.doc.data().Filepath+"\" onclick=\"DeleteFileFromStorage(this.name,this.id)\" class=\"btn btn-warning\"><i class=\"fa fa-trash\"></i></button>"+
                 "</td></tr>"
               }
@@ -268,12 +270,46 @@ function DeleteFileFromStorage(DocrefLink,Docid){
 
 function DeleteFileData(id){
 
-  db.collection("Client_List").doc(ClientDocID).collection().doc(id).delete().then(function() {
+  db.collection("Client_List").doc(ClientDocID).collection("Client_Uploads").doc(id).delete().then(function() {
           $("#uploadedfilelist").empty();
           LoaodClientUploadList(ClientDocId);
-
+          console.log("Doc Deleted");
           }).catch(function(error) {
               console.error("Error removing document: ", error);
           });
+
+}
+
+function LoadClientTaskTable(TClientName){
+
+  var curdate = new Date();
+
+    db.collection("Tasks_List").where("ClientName", "==",TClientName).onSnapshot(function(querySnapshot) {
+        querySnapshot.docChanges().forEach(function(change) {
+          if (change.type === "added") {
+                  MattersTableBody.innerHTML +=
+                  "<tr><td>"+change.doc.data().Task+
+                  "</td><td>"+change.doc.data().Pdate+
+                  "</td><td><center>"+
+                  "<label class=\"custom-control custom-checkbox\">"+
+                  "<input disabled type=\"checkbox\" "+change.doc.data().Rrequired+">"+
+                  "<span class=\"custom-control-label\">&nbsp;</span>"+
+                  "</label>"+
+                  "</td><td>"+change.doc.data().Complete+""+
+                  "</td><td>"+change.doc.data().Ddate+
+                  "</td><td>"+change.doc.data().Assignto+
+                  "</td><td>"+(Math.floor((Date.parse(change.doc.data().Ddate) - Date.parse(curdate)) / (1000 * 60 * 60 * 24)))+
+                  "</td></tr>"
+
+                  NotificationsTableBody.innerHTML +=
+                  "<tr><td>"+change.doc.data().Pdate+
+                  "</td><td>"+change.doc.data().Notes+
+                  "</td></tr>"
+                }
+
+
+              });
+                console.log("Client Tasks Loaded!");
+      });
 
 }
