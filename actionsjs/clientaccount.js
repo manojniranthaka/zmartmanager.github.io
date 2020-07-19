@@ -129,6 +129,7 @@ function SaveUploadData(CID,CName,CCode,FileName,ADate,CFilepath,Dlink){
   .then(function() {
       console.log("Document written ! ");
       $('#fileuploadform')[0].reset();
+      window.location.reload();
     })
   .catch(function(error) {
       console.error("Error adding document: ", error);
