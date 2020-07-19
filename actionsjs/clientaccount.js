@@ -9,11 +9,12 @@ var UploadFileName = $("#FileName").val();
 var UClientName = $("#ClientName").val();
 var UClientCode = $("#ClientCode").val();
 
+
 LoadClientDetalis();
 LoaodClientUploadList();
 LoaodClientUploadList(ClientDocId);
 LoadDataToProfileView(String(ClientDocId));
-LoadClientTaskTable(UClientName);
+
 
 function LoadClientDetalis(){
 
@@ -29,6 +30,7 @@ docRef.get().then(function(doc) {
       $("#ClientID").val(doc.data().docid);
       $("#ClientName").val(doc.data().ClientName);
       $("#ClientCode").html(doc.data().ClientCode);
+      LoadClientTaskTable(String(doc.data().ClientName));
 
     } else {
       window.alert("Something Went Worng ,Contact Your Service Provider !")
@@ -109,7 +111,7 @@ function FileUploadApi(){
 
 function SaveUploadData(CID,CName,CCode,FileName,ADate,CFilepath,Dlink){
 
-  docRef = db.collection("Client_List").doc(CID).collection("Client_Uploads").doc();
+  docRef = db.collection("Client_List").doc(String(CID)).collection("Client_Uploads").doc();
 
   docRef.set({
 
@@ -289,16 +291,11 @@ function LoadClientTaskTable(TClientName){
           if (change.type === "added") {
                   MattersTableBody.innerHTML +=
                   "<tr><td>"+change.doc.data().Task+
-                  "</td><td>"+change.doc.data().Pdate+
-                  "</td><td><center>"+
-                  "<label class=\"custom-control custom-checkbox\">"+
-                  "<input disabled type=\"checkbox\" "+change.doc.data().Rrequired+">"+
-                  "<span class=\"custom-control-label\">&nbsp;</span>"+
-                  "</label>"+
-                  "</td><td>"+change.doc.data().Complete+""+
-                  "</td><td>"+change.doc.data().Ddate+
                   "</td><td>"+change.doc.data().Assignto+
-                  "</td><td>"+(Math.floor((Date.parse(change.doc.data().Ddate) - Date.parse(curdate)) / (1000 * 60 * 60 * 24)))+
+                  "</td><td>"+change.doc.data().Ddate+
+                  "</td><td>"+change.doc.data().Pdate+
+                  "</td><td>"+change.doc.data().Cdate+
+                  "</td><td>"+change.doc.data().Complete+
                   "</td></tr>"
 
                   NotificationsTableBody.innerHTML +=

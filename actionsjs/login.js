@@ -212,7 +212,7 @@ function ClientLogin(){
   var   ClientEmail = $("#ClientEmail").val();
   var   ClientPassword = $("#ClientPassword").val();
 
-  db.collection("Client_List")//.where("ClientEmail","==",ClientEmail)
+  db.collection("Client_List").where("ClientEmail","==",ClientEmail)
       .onSnapshot(function(querySnapshot) {
       querySnapshot.docChanges().forEach(function(change) {
           if( change.doc.data().ClientEmail == ClientEmail && change.doc.data().ClientPassword == ClientPassword){
