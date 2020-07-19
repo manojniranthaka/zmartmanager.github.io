@@ -47,6 +47,7 @@ docRef.get().then(function(doc) {
 function FileUploadApi(){
 
   var UploadFileName = $("#FileName").val();
+  var ClientDocID = $("#ClientID").val();
   var clientfile = document.getElementById("filechooser");
 
   			// get file
